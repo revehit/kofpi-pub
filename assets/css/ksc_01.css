@@ -296,15 +296,24 @@ html {
   display: flex;
 }
 .recommend-box .image-box {
-  width: 410px;
+  width: 375px;
   height: 500px;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  flex-shrink: 0;
 }
 .recommend-box .image-box img {
   object-fit: contain;
+}
+.recommend-box .image-box p {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: #fff;
+  font-size: 12px;
 }
 .recommend-box .contents-box {
   margin-left: 20px;
@@ -318,7 +327,7 @@ html {
   margin-top: 0;
 }
 .recommend-box .contents-box ul li p {
-  max-width: 160px;
+  max-width: 200px;
   max-height: 30px;
   border-radius: 15px;
   display: flex;
@@ -328,7 +337,10 @@ html {
   background-color: #e6f0e5;
   color: #3e9d39;
   font-weight: bold;
+  line-height: 1;
   margin-bottom: 5px;
+  padding: 5px 10px;
+  box-sizing: border-box;
 }
 .recommend-box .contents-box ul li div {
   padding-left: 10px;
@@ -339,10 +351,23 @@ html {
   gap: 20px;
   margin-top: auto;
 }
-.recommend-box .rank-box a img {
-  width: 150px;
-  height: 150px;
+.recommend-box .rank-box .thumbox {
+  width: 120px;
+  height: 160px;
+  overflow: hidden;
+  position: relative;
+}
+.recommend-box .rank-box .thumbox img {
+  width: 120px;
+  height: 160px;
   object-fit: cover;
+}
+.recommend-box .rank-box .thumbox p {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: #fff;
+  font-size: 10px;
 }
 .recommend-box .rank-box a b {
   font-weight: bold;
@@ -357,6 +382,7 @@ html {
   width: 400px;
   margin: 0 auto;
   margin-top: auto;
+  flex-shrink: 0;
 }
 .recommend-box .slide_wrap .img-box {
   width: 280px;
