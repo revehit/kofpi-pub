@@ -1,3 +1,37 @@
+.ksc-wrap.flex-box {
+  display: flex;
+  gap: 30px;
+}
+.ksc-wrap.flex-box .flex-item-left {
+  width: 60%;
+  flex-grow: 1;
+}
+.ksc-wrap.flex-box .flex-item-right {
+  width: 530px;
+  text-align: right;
+  flex-shrink: 0;
+  background-image: url(../images/bg-tab2-3.png);
+  background-repeat: no-repeat;
+  background-size: 440px 500px;
+  background-position: 100% 70%;
+}
+.ksc-wrap.flex-box .flex-item-right .imgbox {
+  width: 450px;
+  margin-top: 50px;
+}
+
+.ksc-wrap.flex-box .flex-item-right .imgbox img {
+  width: 100%;
+  height: 340px;
+}
+.ksc-wrap.flex-box .flex-item-right .imgbox + div {
+  /* margin-top: 20px; */
+  margin-right: 80px;
+}
+.ksc-wrap.flex-box .flex-item-right a {
+  margin-right: 0;
+}
+
 .ksc-box-item {
   display: flex;
   padding: 20px;
@@ -5,16 +39,36 @@
 .ksc-box-item + .ksc-box-item {
   margin-top: 30px;
 }
-.ksc-box-item .box-img > div {
-  width: 100px;
-  height: 100px;
+.ksc-box-item .box-img {
+  width: 130px;
+  height: 130px;
+  position: relative;
+  flex-grow: 0;
+  flex-shrink: 0;
+  margin-right: 20px;
+}
+.ksc-box-item .box-img img {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+.ksc-box-item .box-img:after {
+  content: "";
+  width: 130px;
+  height: 130px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 0;
 }
 .ksc-box-item .box-con {
   padding: 30px;
 }
+
 .ksc-box-item .box-con h4 {
   font-size: 30px;
   font-weight: bold;
+  line-height: 1;
   position: relative;
   padding: 0 40px;
   display: inline-block;
@@ -52,7 +106,7 @@
 .ksc-box-item.orange .box-con .title {
   color: #db7d0f;
 }
-.ksc-box-item.orange .box-img > div {
+.ksc-box-item.orange .box-img:after {
   background-color: #db7d0f;
 }
 .ksc-box-item.orange .btn01 {
@@ -67,7 +121,7 @@
 .ksc-box-item.lightgreen .box-con .title {
   color: #1b7619;
 }
-.ksc-box-item.lightgreen .box-img > div {
+.ksc-box-item.lightgreen .box-img:after {
   background-color: #1b7619;
 }
 .ksc-box-item.lightgreen .btn01 {
@@ -82,7 +136,7 @@
 .ksc-box-item.lightblue .box-con .title {
   color: #2e6de1;
 }
-.ksc-box-item.lightblue .box-img > div {
+.ksc-box-item.lightblue .box-img:after {
   background-color: #2e6de1;
 }
 .ksc-box-item.lightblue .btn01 {
@@ -97,7 +151,7 @@
 .ksc-box-item.purple .box-con .title {
   color: #8e6be1;
 }
-.ksc-box-item.purple .box-img > div {
+.ksc-box-item.purple .box-img:after {
   background-color: #8e6be1;
 }
 .ksc-box-item.purple .btn01 {
