@@ -75,17 +75,21 @@
   margin-bottom: 10px;
 }
 .ksc-box-item .box-con h4 span {
-  font-size: 80px;
-  line-height: 1;
+  width: 50px;
+  height: 50px;
   position: absolute;
+  background-image: url(../images/icon/icon-quotes.png);
+  background-repeat: no-repeat;
+  background-size: 50px 50px;
 }
 .ksc-box-item .box-con h4 span.start {
-  left: 0;
-  top: 0;
+  left: -8px;
+  top: -25px;
+  transform: rotate(180deg);
 }
 .ksc-box-item .box-con h4 span.end {
-  right: 0;
-  top: 0;
+  right: 5;
+  top: -20px;
 }
 .ksc-box-item .box-con .title {
   font-size: 20px;
@@ -106,6 +110,10 @@
 .ksc-box-item.orange .box-con .title {
   color: #db7d0f;
 }
+.ksc-box-item.orange .box-con h4 span {
+  filter: brightness(0) saturate(100%) invert(49%) sepia(77%) saturate(610%)
+    hue-rotate(355deg) brightness(94%) contrast(91%);
+}
 .ksc-box-item.orange .box-img:after {
   background-color: #db7d0f;
 }
@@ -120,6 +128,10 @@
 .ksc-box-item.lightgreen .box-con h4,
 .ksc-box-item.lightgreen .box-con .title {
   color: #1b7619;
+}
+.ksc-box-item.lightgreen .box-con h4 span {
+  filter: brightness(0) saturate(100%) invert(29%) sepia(80%) saturate(818%)
+    hue-rotate(79deg) brightness(96%) contrast(86%);
 }
 .ksc-box-item.lightgreen .box-img:after {
   background-color: #1b7619;
@@ -136,6 +148,10 @@
 .ksc-box-item.lightblue .box-con .title {
   color: #2e6de1;
 }
+.ksc-box-item.lightblue .box-con h4 span {
+  filter: brightness(0) saturate(100%) invert(44%) sepia(37%) saturate(6936%)
+    hue-rotate(208deg) brightness(90%) contrast(96%);
+}
 .ksc-box-item.lightblue .box-img:after {
   background-color: #2e6de1;
 }
@@ -150,6 +166,10 @@
 .ksc-box-item.purple .box-con h4,
 .ksc-box-item.purple .box-con .title {
   color: #8e6be1;
+}
+.ksc-box-item.purple .box-con h4 span {
+  filter: brightness(0) saturate(100%) invert(43%) sepia(91%) saturate(1192%)
+    hue-rotate(226deg) brightness(92%) contrast(91%);
 }
 .ksc-box-item.purple .box-img:after {
   background-color: #8e6be1;
