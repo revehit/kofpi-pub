@@ -1,0 +1,156 @@
+.ksc-box-item {
+  display: flex;
+  padding: 20px;
+}
+.ksc-box-item + .ksc-box-item {
+  margin-top: 30px;
+}
+.ksc-box-item .box-img > div {
+  width: 100px;
+  height: 100px;
+}
+.ksc-box-item .box-con {
+  padding: 30px;
+}
+.ksc-box-item .box-con h4 {
+  font-size: 30px;
+  font-weight: bold;
+  position: relative;
+  padding: 0 40px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.ksc-box-item .box-con h4 span {
+  font-size: 80px;
+  line-height: 1;
+  position: absolute;
+}
+.ksc-box-item .box-con h4 span.start {
+  left: 0;
+  top: 0;
+}
+.ksc-box-item .box-con h4 span.end {
+  right: 0;
+  top: 0;
+}
+.ksc-box-item .box-con .title {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 30px 0 10px;
+}
+.ksc-box-item .badge {
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #fff;
+}
+
+/* color */
+.ksc-box-item.orange {
+  background-color: #fbf4ec;
+}
+.ksc-box-item.orange .box-con h4,
+.ksc-box-item.orange .box-con .title {
+  color: #db7d0f;
+}
+.ksc-box-item.orange .box-img > div {
+  background-color: #db7d0f;
+}
+.ksc-box-item.orange .btn01 {
+  background-color: #db7d0f;
+  border: 1px solid #db7d0f;
+}
+
+.ksc-box-item.lightgreen {
+  background-color: #effbec;
+}
+.ksc-box-item.lightgreen .box-con h4,
+.ksc-box-item.lightgreen .box-con .title {
+  color: #1b7619;
+}
+.ksc-box-item.lightgreen .box-img > div {
+  background-color: #1b7619;
+}
+.ksc-box-item.lightgreen .btn01 {
+  background-color: #1b7619;
+  border: 1px solid #1b7619;
+}
+
+.ksc-box-item.lightblue {
+  background-color: #eef5fd;
+}
+.ksc-box-item.lightblue .box-con h4,
+.ksc-box-item.lightblue .box-con .title {
+  color: #2e6de1;
+}
+.ksc-box-item.lightblue .box-img > div {
+  background-color: #2e6de1;
+}
+.ksc-box-item.lightblue .btn01 {
+  background-color: #2e6de1;
+  border: 1px solid #2e6de1;
+}
+
+.ksc-box-item.purple {
+  background-color: #f4effa;
+}
+.ksc-box-item.purple .box-con h4,
+.ksc-box-item.purple .box-con .title {
+  color: #8e6be1;
+}
+.ksc-box-item.purple .box-img > div {
+  background-color: #8e6be1;
+}
+.ksc-box-item.purple .btn01 {
+  background-color: #8e6be1;
+  border: 1px solid #8e6be1;
+}
+
+.ksc-box-item.orange .badge {
+  background-color: #db7d0f;
+}
+.ksc-box-item.lightblue .badge {
+  background-color: #2e6de1;
+}
+.ksc-box-item.lightgreen .badge {
+  background-color: #1b7619;
+}
+.ksc-box-item.purple .badge {
+  background-color: #8e6be1;
+}
+
+/* list-type */
+.list-type-bar li {
+  position: relative;
+  padding-left: 15px;
+}
+.list-type-bar li:before {
+  content: "-";
+  color: #333;
+  position: absolute;
+  top: 0px;
+  left: 0;
+}
+.list-type-number li {
+  position: relative;
+  padding-left: 20px;
+}
+.list-type-number li:before {
+  position: absolute;
+  top: 1px;
+  left: 0;
+}
+.list-type-number .n1::before {
+  content: "①";
+}
+.list-type-number .n2::before {
+  content: "②";
+}
+.list-type-number .n3::before {
+  content: "③";
+}
+.list-type-number .n4::before {
+  content: "④";
+}
+.list-type-number .n5::before {
+  content: "⑤";
+}
