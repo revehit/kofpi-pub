@@ -2,6 +2,19 @@
 html {
   scroll-behavior: smooth;
 }
+.ksc-wrap .data-wrap {
+  display: none;
+}
+.ksc-wrap .data-wrap.on {
+  display: block;
+}
+
+.ksc-wrap .guide-wrap {
+  margin-top: 40px;
+}
+.ksc-wrap .guide-wrap.on {
+  display: none;
+}
 
 /* box degign */
 .gray-box {
@@ -154,7 +167,7 @@ html {
   object-fit: cover;
 }
 .localbox-wrap .card-wrap.row .card .text-box {
-  width: 67px;
+  width: 70px;
   text-align: center;
 }
 .localbox-wrap .card-wrap.row .card .text-box strong {
