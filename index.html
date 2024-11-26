@@ -1758,17 +1758,15 @@
               <form action="">
                 <div class="job_srch location_filter mt20">
                   <strong>지역선택 </strong>
-                  <select title="시.도를 선택하세요" name="d_type" id="d_type">
-                    <option value="All" selected="">시&middot;도 전체</option>
-                    <option value="dtype15">부산광역시</option>
+                  <select title="시.도를 선택하세요" name="region-parent" id="region-parent">
+                    <option value="">시&middot;도를 선택하세요</option>
                   </select>
-                  <select title="시.군을 선택하세요" name="e_type" id="e_type">
-                    <option value="All" selected="">시&middot;군 전체</option>
-                    <option value="etype15">기장군</option>
+                  <select title="시.군을 선택하세요" name="region-name" id="region-name">
+                    <option value="" selected="">시&middot;군을 선택하세요</option>
                   </select>
-                  <span class="btn01_ss"
-                    ><input type="submit" onclick="" value="검색"
-                  /></span>
+                  <span class="btn01_ss">
+                    <input type="submit" onclick="" value="검색" />
+                  </span>
                 </div>
 
                 <!-- 지역 선택 이전(초기화면) -->
@@ -3101,11 +3099,6 @@
 
     <script type="text/javascript">
       $(document).ready(function () {
-        $('.btn01_ss input[type="submit"]').click(function (event) {
-          event.preventDefault();
-          $(".guide-wrap, .data-wrap").addClass("on");
-        });
-
         // 주요임산물
         $(".contents-box ul li").click(function () {
           if (!$(this).hasClass("on")) {
@@ -3131,6 +3124,8 @@
       });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./assets/js/data.js"></script>
+    <script src="./assets/js/data-action.js"></script>
     <script>
       window.addEventListener("load", displayPeopleChart);
       window.addEventListener("load", displayTempChart);
