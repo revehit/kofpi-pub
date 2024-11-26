@@ -1765,7 +1765,7 @@
                     <option value="" selected="">시&middot;군을 선택하세요</option>
                   </select>
                   <span class="btn01_ss">
-                    <input type="submit" onclick="" value="검색" />
+                    <input type="submit" value="검색" />
                   </span>
                 </div>
 
@@ -1829,7 +1829,7 @@
                       <div class="topbox">
                         <h5>인구현황</h5>
                       </div>
-                      <div class="botbox">
+                      <div id="populationStatus" class="botbox">
                         <div class="data-box">
                           <div class="avatar-list">
                             <p class="box-title">인구(명)</p>
@@ -1841,7 +1841,7 @@
                                 />
                               </div>
                               <div>
-                                <p>421</p>
+                                <p id="populationStatus-forestryPopulation">421</p>
                               </div>
                               <span>임업인</span>
                             </div>
@@ -1853,7 +1853,7 @@
                                 />
                               </div>
                               <div>
-                                <p>178,729</p>
+                                <p id="populationStatus-population">178,729</p>
                               </div>
                               <span>전체</span>
                             </div>
@@ -1868,7 +1868,7 @@
                                 />
                               </div>
                               <div>
-                                <p>20</p>
+                                <p id="populationStatus-forestryHouseholds">20</p>
                               </div>
                               <span>임가</span>
                             </div>
@@ -1880,7 +1880,7 @@
                                 />
                               </div>
                               <div>
-                                <p>73,595</p>
+                                <p id="populationStatus-households">73,595</p>
                               </div>
                               <span>전체</span>
                             </div>
@@ -1895,7 +1895,7 @@
                                 />
                               </div>
                               <div>
-                                <p>43.3</p>
+                                <p id="populationStatus-averageAge">43.3</p>
                               </div>
                             </div>
                           </div>
@@ -3127,7 +3127,6 @@
     <script src="./assets/js/data.js"></script>
     <script src="./assets/js/data-action.js"></script>
     <script>
-      window.addEventListener("load", displayPeopleChart);
       window.addEventListener("load", displayTempChart);
       window.addEventListener("load", displayRainChart);
       window.addEventListener("load", displayWonChart);
@@ -3136,33 +3135,58 @@
       window.addEventListener("load", displayEstateChart1);
       window.addEventListener("load", displayEstateChart2);
 
-      function displayPeopleChart() {
-        var ctx = document.getElementById("peopleChart").getContext("2d");
-        var chart = new Chart(ctx, {
-          type: "bar",
-          responsive: true,
-          data: {
-            labels: ["2019", "2020", "2021", "2022", "2023"],
-            datasets: [
-              {
-                label: "인구",
-                fill: false,
-                backgroundColor: "#679951",
-                borderColor: "#679951",
-                data: [164716, 174545, 177125, 178614, 178729],
+      /**
+       * 인구 현황 그래프
+       * @param regionCharacteristics
+       */
+      let peopleChart;
+      function displayPeopleChart(regionCharacteristics) {
+        // 데이터를 추출
+        const years = Object.keys(regionCharacteristics.population); // ["2019", "2020", "2021", "2022", "2023"]
+        const populationData = Object.values(regionCharacteristics.population); // [164716, 174545, 177125, 178614, 178729]
+        const householdsData = Object.values(regionCharacteristics.households); // [62769, 67189, 70266, 72002, 73595]
+
+        if (peopleChart) {
+          // 기존 그래프가 있으면 데이터를 업데이트
+          peopleChart.data.labels = years;
+          peopleChart.data.datasets[0].data = populationData; // 인구 데이터
+          peopleChart.data.datasets[1].data = householdsData; // 가구 데이터
+          peopleChart.update(); // 그래프 리로드
+        } else {
+          var peopleChartCTX = document.getElementById("peopleChart").getContext("2d");
+          peopleChart = new Chart(peopleChartCTX, {
+            type: "bar",
+            responsive: true,
+            data: {
+              labels: years,
+              datasets: [
+                {
+                  label: "인구",
+                  fill: false,
+                  backgroundColor: "#679951",
+                  borderColor: "#679951",
+                  data: populationData,
+                },
+                {
+                  label: "가구",
+                  fill: false,
+                  backgroundColor: "#dfb162",
+                  borderColor: "#dfb162",
+                  data: householdsData,
+                },
+              ],
+            },
+            options: {
+              responsive: true,
+              maintainAspectRatio: false,
+              scales: {
+                y: {
+                  beginAtZero: true,
+                },
               },
-              {
-                label: "가구",
-                fill: false,
-                backgroundColor: "#dfb162",
-                borderColor: "#dfb162",
-                data: [62769, 67189, 70266, 72002, 73595],
-              },
-            ],
-          },
-          // Configuration options go here
-          options: {},
-        });
+            },
+          });
+        }
       }
 
       // temp
