@@ -1932,9 +1932,12 @@
                           </div>
                         </div>
                         <div class="chartbox">
-                          <p class="box-title">지역내총생산(원)</p>
+                          <p class="box-title">임산물 종류별 생산 현황</p>
                           <div class="box" style="width: 100%; height: 380px">
-                            <canvas id="wonChart"></canvas>
+                            <canvas
+                              id="wonChart"
+                              style="margin: 0 auto; height: 380px"
+                            ></canvas>
                           </div>
                         </div>
                         <div class="data-box">
@@ -2022,7 +2025,7 @@
                       <div class="topbox">
                         <h5>시설 현황</h5>
                       </div>
-                      <div class="botbox">
+                      <div class="botbox one-item">
                         <div class="data-box">
                           <p class="box-title">시설 정보(개)</p>
                           <div class="card-wrap column">
@@ -2091,14 +2094,39 @@
                             </div>
                           </div>
                         </div>
+                        <div class="data-box"></div>
+                      </div>
+                    </div>
+
+                    <div class="linebox">
+                      <div class="topbox">
+                        <h5>부동산 정보(원/m<sup>2</sup>)</h5>
+                      </div>
+                      <div class="botbox">
                         <div class="chartbox">
-                          <p class="box-title">부동산 정보(원/m<sup>2</sup>)</p>
+                          <p class="box-title">녹지지역</p>
+
                           <div class="box" style="width: 100%; height: 380px">
+                            <canvas id="estateChart1"></canvas>
+                          </div>
+                          <!-- <div class="box" style="width: 100%; height: 380px">
                             <canvas id="estateChart"></canvas>
                           </div>
                           <p class="guide-text">
                             ※ 해당 시·도 단위의 표준지공시지가입니다.
-                          </p>
+                          </p> -->
+                        </div>
+                        <div class="chartbox">
+                          <p class="box-title">비도시지역</p>
+                          <div class="box" style="width: 100%; height: 380px">
+                            <canvas id="estateChart2"></canvas>
+                          </div>
+                          <!-- <div class="box" style="width: 100%; height: 380px">
+                            <canvas id="estateChart"></canvas>
+                          </div>
+                          <p class="guide-text">
+                            ※ 해당 시·도 단위의 표준지공시지가입니다.
+                          </p> -->
                         </div>
                       </div>
                     </div>
@@ -2133,32 +2161,6 @@
                               <p>출처 : 국립생물자원관</p>
                             </div>
                             <div class="contents-box">
-                              <ul>
-                                <li>
-                                  <p>주 이용범위</p>
-                                  <div>식용, 약용</div>
-                                </li>
-                                <li>
-                                  <p>재배환경</p>
-                                  <div>
-                                    - 기후대: 해안지대를 제외한 표고 500m 이하의
-                                    지역<br />
-                                    - 온도: 연평균 기온 8℃ 이상 / 최저기온 -27℃
-                                    이상<br />
-                                    - 토양: 토심이 깊고 배수가 잘 되며 통기성이
-                                    좋은 사질양토 또는 자갈이 섞인 양토
-                                  </div>
-                                </li>
-                                <li>
-                                  <p>2023년 기준 소득액</p>
-                                  <div>
-                                    19,344천원/ha (평가액 - 경영비)<br />
-                                    - 평가액: 31,956천원/ha, 경영비:
-                                    12,612천원/ha<br />
-                                    ※ 전국 평균값으로, 실제와 다를 수 있습니다.
-                                  </div>
-                                </li>
-                              </ul>
                               <div class="rank-box">
                                 <a href="">
                                   <div class="thumbox">
@@ -2183,6 +2185,45 @@
                                   <b>3위 <span>밤</span></b>
                                 </a>
                               </div>
+                              <ul>
+                                <li class="on">
+                                  <a href="javascript:void(0);">
+                                    <p class="top">주 이용범위</p>
+                                  </a>
+                                  <div>식용, 약용</div>
+                                </li>
+                                <li>
+                                  <a href="javascript:void(0);">
+                                    <p class="top">재배환경</p>
+                                  </a>
+                                  <div>
+                                    <p>
+                                      - 기후대: 해안지대를 제외한 표고 500m
+                                      이하의 지역
+                                    </p>
+                                    <p>
+                                      - 온도: 연평균 기온 8℃ 이상 / 최저기온
+                                      -27℃ 이상
+                                    </p>
+                                    <p>
+                                      - 토양: 토심이 깊고 배수가 잘 되며
+                                      통기성이 좋은 사질양토 또는 자갈이 섞인
+                                      양토
+                                    </p>
+                                  </div>
+                                </li>
+                                <li>
+                                  <a href="javascript:void(0);">
+                                    <p class="top">2023년 기준 소득액</p>
+                                  </a>
+                                  <div>
+                                    19,344천원/ha (평가액 - 경영비)<br />
+                                    - 평가액: 31,956천원/ha, 경영비:
+                                    12,612천원/ha<br />
+                                    ※ 전국 평균값으로, 실제와 다를 수 있습니다.
+                                  </div>
+                                </li>
+                              </ul>
                             </div>
                             <div class="slide_wrap">
                               <ul class="slide_img">
@@ -3064,8 +3105,17 @@
           event.preventDefault();
           $(".guide-wrap, .data-wrap").addClass("on");
         });
+
+        // 주요임산물
+        $(".contents-box ul li").click(function () {
+          if (!$(this).hasClass("on")) {
+            $(".contents-box ul li").removeClass("on");
+            $(this).addClass("on");
+          }
+        });
       });
     </script>
+
     <!-- step2 slider -->
     <script type="text/javascript">
       $(document).ready(function () {
@@ -3087,6 +3137,9 @@
       window.addEventListener("load", displayRainChart);
       window.addEventListener("load", displayWonChart);
       window.addEventListener("load", displayEstateChart);
+
+      window.addEventListener("load", displayEstateChart1);
+      window.addEventListener("load", displayEstateChart2);
 
       function displayPeopleChart() {
         var ctx = document.getElementById("peopleChart").getContext("2d");
@@ -3239,16 +3292,20 @@
       function displayWonChart() {
         var ctx = document.getElementById("wonChart").getContext("2d");
         var chart = new Chart(ctx, {
-          type: "line",
+          type: "pie",
           responsive: true,
           data: {
-            labels: ["2019", "2020", "2021"],
+            labels: ["2019년", "2020년", "2021년"],
             datasets: [
               {
-                label: "지역내총생산",
-                fill: false,
-                backgroundColor: "#679951",
-                borderColor: "#679951",
+                //label: "2019년",
+                //fill: false,
+                //backgroundColor: "#679951",
+                //borderColor: "#679951",
+                //data: [5624192],
+                //data: [6368873],
+                // data: [6587541],
+                backgroundColor: ["#679951", "#dfb162", "#ed6d85"],
                 data: [5624192, 6368873, 6587541],
               },
             ],
@@ -3273,6 +3330,63 @@
                 backgroundColor: "#679951",
                 borderColor: "#679951",
                 data: [683818, 699654],
+              },
+            ],
+          },
+          // Configuration options go here
+          options: {},
+        });
+      }
+
+      function displayEstateChart1() {
+        var ctx = document.getElementById("estateChart1").getContext("2d");
+        var chart = new Chart(ctx, {
+          type: "line",
+          responsive: true,
+          data: {
+            labels: ["2020", "2021", "2022", "2023", "2024"],
+            datasets: [
+              {
+                label: "최고",
+                fill: false,
+                backgroundColor: "#679951",
+                borderColor: "#679951",
+                data: [136000, 143000, 151000, 140300, 140300],
+              },
+              {
+                label: "최저",
+                fill: false,
+                backgroundColor: "#dfb162",
+                borderColor: "#dfb162",
+                data: [1200, 1300, 1400, 1310, 1310],
+              },
+            ],
+          },
+          // Configuration options go here
+          options: {},
+        });
+      }
+      function displayEstateChart2() {
+        var ctx = document.getElementById("estateChart2").getContext("2d");
+        var chart = new Chart(ctx, {
+          type: "line",
+          responsive: true,
+          data: {
+            labels: ["2020", "2021", "2022", "2023", "2024"],
+            datasets: [
+              {
+                label: "최고",
+                fill: false,
+                backgroundColor: "#679951",
+                borderColor: "#679951",
+                data: [210000, 220000, 230500, 213900, 213900],
+              },
+              {
+                label: "최저",
+                fill: false,
+                backgroundColor: "#dfb162",
+                borderColor: "#dfb162",
+                data: [385, 370, 390, 359, 360],
               },
             ],
           },
