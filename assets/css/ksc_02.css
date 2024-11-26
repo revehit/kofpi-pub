@@ -121,6 +121,9 @@
   background-color: #db7d0f;
   border: 1px solid #db7d0f;
 }
+.ksc-box-item.orange .badge {
+  background-color: #db7d0f;
+}
 
 .ksc-box-item.lightgreen {
   background-color: #effbec;
@@ -139,6 +142,9 @@
 .ksc-box-item.lightgreen .btn01 {
   background-color: #1b7619;
   border: 1px solid #1b7619;
+}
+.ksc-box-item.lightgreen .badge {
+  background-color: #1b7619;
 }
 
 .ksc-box-item.lightblue {
@@ -159,6 +165,9 @@
   background-color: #2e6de1;
   border: 1px solid #2e6de1;
 }
+.ksc-box-item.lightblue .badge {
+  background-color: #2e6de1;
+}
 
 .ksc-box-item.purple {
   background-color: #f4effa;
@@ -177,16 +186,6 @@
 .ksc-box-item.purple .btn01 {
   background-color: #8e6be1;
   border: 1px solid #8e6be1;
-}
-
-.ksc-box-item.orange .badge {
-  background-color: #db7d0f;
-}
-.ksc-box-item.lightblue .badge {
-  background-color: #2e6de1;
-}
-.ksc-box-item.lightgreen .badge {
-  background-color: #1b7619;
 }
 .ksc-box-item.purple .badge {
   background-color: #8e6be1;
