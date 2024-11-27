@@ -38,7 +38,7 @@ const forestProducts = [
             downloadSn: '9'
         },
         manual: {
-            image: '/assets/images/pdf-slide-img/thum_1.jpg',
+            image: '/assets/images/guide-img/guide_1.jpg',
             pdf: 'https://www.kofpi.or.kr/kofportal_att/repository/upload/pdf/temp867482829288667673701. 감.pdf',
             downloadSn: '575'
         },
@@ -71,7 +71,7 @@ const forestProducts = [
             downloadSn: '40'
         },
         manual: {
-            image: '/assets/images/pdf-slide-img/thum_2.jpg',
+            image: '/assets/images/guide-img/guide_2.jpg',
             pdf: 'https://www.kofpi.or.kr/kofportal_att/repository/upload/pdf/temp580889342159752982102. 표고버섯.pdf',
             downloadSn: '574'
         }
@@ -99,7 +99,7 @@ const forestProducts = [
             downloadSn: '29'
         },
         manual: {
-            image: '/assets/images/pdf-slide-img/thum_3.jpg',
+            image: '/assets/images/guide-img/guide_3.jpg',
             pdf: 'https://www.kofpi.or.kr/kofportal_att/repository/upload/pdf/temp335768287918162013103. 참나물.pdf',
             downloadSn: '591'
         }
@@ -138,7 +138,7 @@ const forestProducts = [
             downloadSn: '45'
         },
         manual: {
-            image: '/assets/images/pdf-slide-img/thum_4.jpg',
+            image: '/assets/images/guide-img/guide_4.jpg',
             pdf: 'https://www.kofpi.or.kr/kofportal_att/repository/upload/pdf/temp694648683790144375404. 은행나무.pdf',
             downloadSn: '586'
         }
@@ -188,7 +188,7 @@ const forestProducts = [
             downloadSn: ''
         },
         manual: {
-            image: '/assets/images/pdf-slide-img/thum_6.jpg',
+            image: '/assets/images/guide-img/guide_6.jpg',
             pdf: 'https://www.kofpi.or.kr/kofportal_att/repository/upload/pdf/temp845415369431981186406. 잣.pdf',
             downloadSn: '582'
         }
@@ -221,7 +221,7 @@ const forestProducts = [
             downloadSn: '30'
         },
         manual: {
-            image: '/assets/images/pdf-slide-img/thum_7.jpg',
+            image: '/assets/images/guide-img/guide_7_1.jpg',
             pdf: 'https://www.kofpi.or.kr/kofportal_att/repository/upload/pdf/temp5401512528801262986취나물1.pdf',
             downloadSn: '589'
         }
@@ -262,7 +262,7 @@ const forestProducts = [
             downloadSn: '13'
         },
         manual: {
-            image: '/assets/images/pdf-slide-img/thum_8.jpg',
+            image: '/assets/images/guide-img/guide_8.jpg',
             pdf: 'https://www.kofpi.or.kr/kofportal_att/repository/upload/pdf/temp226729821803089771508. 더덕.pdf',
             downloadSn: '579'
         }
@@ -296,7 +296,7 @@ const forestProducts = [
             downloadSn: ''
         },
         manual: {
-            image: '/assets/images/pdf-slide-img/thum_9.jpg',
+            image: '/assets/images/guide-img/guide_9.jpg',
             pdf: 'https://www.kofpi.or.kr/kofportal_att/repository/upload/pdf/temp738163888170844309009. 고려엉겅퀴.pdf',
             downloadSn: '572'
         }
@@ -323,7 +323,7 @@ const forestProducts = [
             downloadSn: '26'
         },
         manual: {
-            image: '/assets/images/pdf-slide-img/thum_10.jpg',
+            image: '/assets/images/guide-img/guide_10.jpg',
             pdf: 'https://www.kofpi.or.kr/kofportal_att/repository/upload/pdf/temp382005770303501293210. 도라지.pdf',
             downloadSn: '583'
         }
@@ -357,7 +357,7 @@ const forestProducts = [
             downloadSn: '11'
         },
         manual: {
-            image: '/assets/images/pdf-slide-img/thum_11.jpg',
+            image: '/assets/images/guide-img/guide_11.jpg',
             pdf: 'https://www.kofpi.or.kr/kofportal_att/repository/upload/pdf/temp505235104854983370911. 오미자.pdf',
             downloadSn: '580'
         }
@@ -394,7 +394,7 @@ const forestProducts = [
             downloadSn: '43'
         },
         manual: {
-            image: '/assets/images/pdf-slide-img/thum_12.jpg',
+            image: '/assets/images/guide-img/guide_12.jpg',
             pdf: 'https://www.kofpi.or.kr/kofportal_att/repository/upload/pdf/temp454899472214768969812. 밤.pdf',
             downloadSn: '577'
         }
@@ -463,7 +463,7 @@ const forestProducts = [
             downloadSn: '86'
         },
         manual: {
-            image: '/assets/images/pdf-slide-img/thum_15.jpg',
+            image: '/assets/images/guide-img/guide_15.jpg',
             pdf: 'https://www.kofpi.or.kr/kofportal_att/repository/upload/pdf/temp531327402187431852515. 복분자딸기.pdf',
             downloadSn: '587'
         }
@@ -496,7 +496,7 @@ const forestProducts = [
             downloadSn: ''
         },
         manual: {
-            image: '/assets/images/pdf-slide-img/thum_16.jpg',
+            image: '/assets/images/guide-img/guide_16.jpg',
             pdf: 'https://www.kofpi.or.kr/kofportal_att/repository/upload/pdf/temp54381762289460624816. 천마.pdf',
             downloadSn: '593'
         }
@@ -529,7 +529,7 @@ const forestProducts = [
             downloadSn: '34'
         },
         manual: {
-            image: '/assets/images/pdf-slide-img/thum_17.jpg',
+            image: '/assets/images/guide-img/guide_17.jpg',
             pdf: 'https://www.kofpi.or.kr/kofportal_att/repository/upload/pdf/temp45327290239919066817. 황칠나무.pdf',
             downloadSn: '596'
         }
@@ -582,7 +582,7 @@ const forestProducts = [
             downloadSn: ''
         },
         manual: {
-            image: '/assets/images/pdf-slide-img/thum_19.jpg',
+            image: '/assets/images/guide-img/guide_19.jpg',
             pdf: 'https://www.kofpi.or.kr/kofportal_att/repository/upload/pdf/temp94946085370467927919. 작약.pdf',
             downloadSn: '588'
         }
@@ -650,7 +650,7 @@ const forestProducts = [
             downloadSn: ''
         },
         manual: {
-            image: '/assets/images/pdf-slide-img/thum_21.jpg',
+            image: '/assets/images/guide-img/guide_21.jpg',
             pdf: 'https://www.kofpi.or.kr/kofportal_att/repository/upload/pdf/temp779298851409424206721. 천궁.pdf',
             downloadSn: '598'
         }
@@ -687,7 +687,7 @@ const forestProducts = [
             downloadSn: '36'
         },
         manual: {
-            image: '/assets/images/pdf-slide-img/thum_23.jpg',
+            image: '/assets/images/guide-img/guide_23.jpg',
             pdf: 'https://www.kofpi.or.kr/kofportal_att/repository/upload/pdf/temp908277884530654604123. 산마늘.pdf',
             downloadSn: '585'
         }
@@ -720,7 +720,7 @@ const forestProducts = [
             downloadSn: ''
         },
         manual: {
-            image: '/assets/images/pdf-slide-img/thum_24.jpg',
+            image: '/assets/images/guide-img/guide_24.jpg',
             pdf: 'https://www.kofpi.or.kr/kofportal_att/repository/upload/pdf/temp361681015168323553524. 죽순.pdf',
             downloadSn: '597'
         }
@@ -753,7 +753,7 @@ const forestProducts = [
             downloadSn: '25'
         },
         manual: {
-            image: '/assets/images/pdf-slide-img/thum_25.jpg',
+            image: '/assets/images/guide-img/guide_25.jpg',
             pdf: 'https://www.kofpi.or.kr/kofportal_att/repository/upload/pdf/temp835351590841816817925. 고사리.pdf',
             downloadSn: '576'
         }
@@ -785,7 +785,7 @@ const forestProducts = [
             downloadSn: ''
         },
         manual: {
-            image: '/assets/images/pdf-slide-img/thum_26.jpg',
+            image: '/assets/images/guide-img/guide_26.jpg',
             pdf: 'https://www.kofpi.or.kr/kofportal_att/repository/upload/pdf/temp658636784376998574126. 하수오.pdf',
             downloadSn: '595'
         }
@@ -838,7 +838,7 @@ const forestProducts = [
             downloadSn: '40'
         },
         manual: {
-            image: '/assets/images/pdf-slide-img/thum_29.jpg',
+            image: '/assets/images/guide-img/guide_29.jpg',
             pdf: 'https://www.kofpi.or.kr/kofportal_att/repository/upload/pdf/temp580889342159752982102. 표고버섯.pdf',
             downloadSn: '574'
         }
@@ -873,7 +873,7 @@ const forestProducts = [
             downloadSn: '12'
         },
         manual: {
-            image: '/assets/images/pdf-slide-img/thum_30.jpg',
+            image: '/assets/images/guide-img/guide_30.jpg',
             pdf: 'https://www.kofpi.or.kr/kofportal_att/repository/upload/pdf/temp139398434204143743030. 구기자.pdf',
             downloadSn: '573'
         }
@@ -915,7 +915,7 @@ const forestProducts = [
             downloadSn: ''
         },
         manual: {
-            image: '/assets/images/pdf-slide-img/thum_31.jpg',
+            image: '/assets/images/guide-img/guide_31.jpg',
             pdf: 'https://www.kofpi.or.kr/kofportal_att/repository/upload/pdf/temp388181095864273234331. 오갈피나무.pdf',
             downloadSn: '581'
         }
@@ -959,7 +959,7 @@ const forestProducts = [
             downloadSn: '41'
         },
         manual: {
-            image: '/assets/images/pdf-slide-img/thum_33.jpg',
+            image: '/assets/images/guide-img/guide_33.jpg',
             pdf: 'https://www.kofpi.or.kr/kofportal_att/repository/upload/pdf/temp487472840848138561133. 호두나무.pdf',
             downloadSn: '584'
         }
@@ -986,7 +986,7 @@ const forestProducts = [
             downloadSn: '599'
         },
         manual: {
-            image: '/assets/images/pdf-slide-img/thum_34.jpg',
+            image: '/assets/images/guide-img/guide_34.jpg',
             pdf: 'https://www.kofpi.or.kr/kofportal_att/repository/upload/pdf/temp104228274552938708834. 두릅.pdf',
             downloadSn: '592'
         }
@@ -1026,7 +1026,7 @@ const forestProducts = [
             downloadSn: '38'
         },
         manual: {
-            image: '/assets/images/pdf-slide-img/thum_35.jpg',
+            image: '/assets/images/guide-img/guide_35.jpg',
             pdf: 'https://www.kofpi.or.kr/kofportal_att/repository/upload/pdf/temp497792531381246647535. 다래.pdf',
             downloadSn: '594'
         }
