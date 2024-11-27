@@ -2,13 +2,11 @@
 html {
   scroll-behavior: smooth;
 }
-.guide-wrap {
-  display: none;
-}
+
 .ksc-wrap .data-wrap {
-  /* visibility: hidden;
+  visibility: hidden;
   width: 0;
-  height: 0; */
+  height: 0;
 }
 .ksc-wrap .data-wrap.on {
   visibility: visible;
