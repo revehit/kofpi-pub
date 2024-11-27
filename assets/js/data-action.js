@@ -80,6 +80,12 @@ $(document).ready(function () {
         // 부동산 정보(원/m2)
         displayGreenZoneChart(regionData.realEstate.greenZone);
         displayNonUrbanZoneChart(regionData.realEstate.nonUrbanZone);
+
+        // 멘토
+        renderMentors(regionData.supportSystem.mento);
+
+        // Step3
+        renderOrganizationLinks(regionData.supportSystem.organizations);
     });
 });
 
@@ -99,3 +105,45 @@ function formatNumber(value) {
     }
     return value.toLocaleString(); // 자릿수 구분 적용
 }
+
+// 기존 링크를 제거하고 새로 그리기
+function renderOrganizationLinks(organizations) {
+    const botbox = document.querySelector("#step3 .botbox");
+    botbox.innerHTML = "";
+
+    // 2. organizations 배열을 순회하여 <a> 요소 생성 및 추가
+    organizations.forEach((organization) => {
+        const linkElement = document.createElement("a");
+        linkElement.href = organization.url;
+        linkElement.className = "btn01";
+        linkElement.target = "_blank";
+        linkElement.title = "새창열기";
+        linkElement.textContent = `${organization.title} 바로가기`;
+        botbox.appendChild(linkElement);
+    });
+}
+
+function renderMentors(mentorIds) {
+    const filteredMentors = mentors.filter(mentor => mentorIds.includes(mentor.id));
+
+    let html = ''; // HTML 문자열 초기화
+    filteredMentors.forEach(mentor => {
+        html += `
+            <tr>
+                <td class="nobor_l">${mentor.id}</td>
+                <td>${mentor.name}</td>
+                <td>${mentor.mainField}</td>
+                <td>${mentor.subItems}</td>
+                <td>${mentor.region}</td>
+                <td class="t_newlaout">
+                    <ul class="dot-list">
+                        ${mentor.coreTech.map(tech => `<li>${tech}</li>`).join('')}
+                    </ul>
+                </td>
+            </tr>
+        `;
+    });
+
+    $('#mentorList tbody').html(html);
+}
+
