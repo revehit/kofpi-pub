@@ -1,3 +1,5 @@
+let originalRankedProducts;
+let originalPriority;
 $(document).ready(function () {
     /*
      * 지역 선택 Selectbox 설정
@@ -87,24 +89,15 @@ $(document).ready(function () {
         // Step3
         renderOrganizationLinks(regionData.supportSystem.organizations);
 
-        const rankedProducts = regionData.recommendedForestProducts.priority.map((item) =>
+        // 추천 임산물
+        originalPriority = [...regionData.recommendedForestProducts.priority];
+        originalRankedProducts = regionData.recommendedForestProducts.priority.map((item) =>
             forestProducts.find((prod) => prod.name === item.product)
         );
 
-        if (rankedProducts.length > 0) {
-           createForestProductBox(rankedProducts);
-           // $('#forest-products').append(html); // 적절한 부모 요소에 추가
+        if (originalRankedProducts.length > 0) {
+           createForestProductBox(originalRankedProducts);
         }
-
-        // regionData.recommendedForestProducts.priority.forEach((item) => {
-        //     const product = forestProducts.find(
-        //         (prod) => prod.name === item.product
-        //     );
-        //     if (product) {
-        //         const html = createForestProductBox(product, item.rank);
-        //         $('#forest-products').append(html); // 적절한 부모 요소에 추가
-        //     }
-        // });
     });
 });
 
@@ -205,22 +198,27 @@ function createForestProductBox(rankedProducts) {
 
     // 2위 이후 제품 HTML 생성
     const otherRanksHtml = rankedProducts.slice(1) // 2위부터 시작
-        .map((product, index) => `
-            <a href="">
+        .map((product, index) => {
+            const rank = originalPriority.findIndex(item => item.product === product.name) + 1;
+            return `
+           <a href="javascript:void(0);" data-rank="${rank}">
               <div class="thumbox">
                 <img src="${product.imageUrl}" alt="${product.name}" />
                 <p>${product.imageSource ? `출처 : ${product.imageSource}` : ''}</p>
               </div>
-              <b>${index + 2}위 <span>${product.name}</span></b>
-            </a>`
-        ).join('');
+              <b>${rank}위 <span>${product.name}</span></b>
+            </a>`;
+        })
+        .join('');
 
     const rankBoxHtml = `<div class="rank-box">${otherRanksHtml}</div>`;
 
     // 추천 박스 HTML 생성
     const recommendBoxHtml = `
         <div class="recommend-box">
-            <h5>임산물 1위 <span>${topProduct.name}</span></h5>
+            <h5>
+                임산물 ${originalPriority.findIndex(item => item.product === topProduct.name) + 1}위 <span>${topProduct.name}</span>
+            </h5>
             <div class="recommend-inner">
                 <div class="image-box">
                     <img src="${topProduct.imageUrl}" alt="${topProduct.name}" />
@@ -248,6 +246,8 @@ function createForestProductBox(rankedProducts) {
     setEventHandler();
 }
 
+
+
 // 클릭 이벤트 핸들러 설정
 function setEventHandler() {
     try {
@@ -273,6 +273,18 @@ function setEventHandler() {
     } catch (e) {
         //
     }
+
+    $('#forest-products .rank-box').on('click', 'a', function () {
+        const rank = $(this).data('rank');
+        const selectedProduct = originalRankedProducts[rank - 1]; // 선택된 상품 가져오기
+
+        // 배열 순서를 변경하여 1위 자리를 선택된 상품으로 업데이트
+        const updatedRankedProducts = originalRankedProducts.filter((_, idx) => idx !== rank - 1); // 선택된 상품을 제외한 나머지
+        updatedRankedProducts.unshift(selectedProduct); // 선택된 상품을 첫 번째로 이동
+
+        // 1위 자리 업데이트
+        createForestProductBox(updatedRankedProducts);
+    });
 }
 
 /**
