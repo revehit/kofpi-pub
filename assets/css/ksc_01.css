@@ -20,6 +20,20 @@ html {
 .ksc-wrap .guide-wrap.on {
   display: none;
 }
+.ksc-wrap .btn01 {
+  border-radius: 0 20px 0 20px;
+}
+.ksc-wrap .table_col {
+  background-color: transparent;
+}
+
+.ksc-wrap .table_col tbody th,
+.ksc-wrap .table_col tbody td {
+  color: #111;
+}
+.ksc-wrap .table_col thead tr:first-child th {
+  background: #f2ddc7;
+}
 
 /* box degign */
 .gray-box {
@@ -349,7 +363,7 @@ html {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  flex-shrink: 0;
+  flex-shrink: 1;
   margin-right: 30px;
 }
 
@@ -360,11 +374,9 @@ html {
   border-top: 0;
 }
 .recommend-box .contents-box ul li a {
-  /* max-width: 200px;
-  max-height: 30px;
-  border-radius: 15px; */
   display: flex;
   align-items: center;
+  justify-content: space-between;
   border: 1px solid #3e9d39;
   background-color: #e6f0e5;
   padding: 10px;
@@ -374,6 +386,15 @@ html {
   text-align: left;
   color: #3e9d39;
   font-weight: bold;
+}
+.recommend-box .contents-box ul li a em {
+  width: 15px;
+  height: 15px;
+  background-image: url(../images/icon/icon-arrow-down.png);
+  background-repeat: no-repeat;
+  background-size: 15px;
+  filter: brightness(0) saturate(100%) invert(50%) sepia(10%) saturate(2987%)
+    hue-rotate(69deg) brightness(100%) contrast(88%);
 }
 .recommend-box .contents-box ul li div {
   height: 0px;
@@ -391,6 +412,12 @@ html {
 }
 .recommend-box .contents-box ul li.on a .top {
   color: #fff;
+}
+.recommend-box .contents-box ul li.on a em {
+  /* transform: rotate(180deg);
+  filter: brightness(0) saturate(100%) invert(100%) sepia(1%) saturate(1496%)
+    hue-rotate(128deg) brightness(115%) contrast(100%); */
+  display: none;
 }
 .recommend-box .contents-box ul li.on div {
   height: 100%;
@@ -501,10 +528,9 @@ html {
   right: 0;
   top: 70%;
   transform: translateY(-50%);
-  border: 1px solid #3e9d39;
   border-radius: 10px;
   overflow: hidden;
-  background-color: #fff;
+  background-color: transparent;
   z-index: 9998;
 }
 .localpage-quickmenu .top-text {
@@ -515,6 +541,9 @@ html {
 }
 .localpage-quickmenu ul {
   padding: 20px 0;
+  border: 1px solid #3e9d39;
+  border-radius: 0 0 10px 10px;
+  background-color: #fff;
 }
 .localpage-quickmenu ul li + li {
   margin-top: 20px;
@@ -529,4 +558,17 @@ html {
 .localpage-quickmenu ul li a p {
   font-size: 14px;
   padding-top: 5px;
+}
+.localpage-quickmenu .top {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #f7cb70;
+  border: 1px solid #111;
+  color: #111;
+  margin: 0 auto;
+  margin-top: 10px;
 }
