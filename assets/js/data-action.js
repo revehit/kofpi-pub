@@ -47,10 +47,55 @@ $(document).ready(function () {
         $('#populationStatus-households').html(`${regionData.populationStatus.households['2023'].toLocaleString()}`);
         $('#populationStatus-forestryHouseholds').html(`${regionData.populationStatus.forestryHouseholds['2020'].toLocaleString()}`);
         $('#populationStatus-averageAge').html(`${regionData.populationStatus.averageAge['2023']}`);
+
+        // 안전
+        $('#safety-trafficAccidents').html(`${formatNumber(regionData.safety.trafficAccidents['2022'])}`);
+        $('#safety-fires').html(`${formatNumber(regionData.safety.fires['2022'])}`);
+        $('#safety-crimes').html(`${formatNumber(regionData.safety.crimes['2022'])}`);
+        $('#safety-publicSafety').html(`${formatNumber(regionData.safety.publicSafety['2022'])}`);
+        $('#safety-suicides').html(`${formatNumber(regionData.safety.suicides['2022'])}`);
+        $('#safety-infectiousDiseases').html(`${formatNumber(regionData.safety.infectiousDiseases['2022'])}`);
+
+        // 시설정보
+        $('#education-kindergartens').html(`${formatNumber(regionData.education.kindergartens['2024'])}`);
+        $('#education-elementarySchools').html(`${formatNumber(regionData.education.elementarySchools['2024'])}`);
+        $('#education-universities').html(`${formatNumber(regionData.education.universities['2024'])}`);
+        $('#education-privateInstitutes').html(`${formatNumber(regionData.education.privateInstitutes['2023'])}`);
+        $('#medical-hospitals').html(`${formatNumber(regionData.medical.hospitals['2024'])}`);
+        $('#medical-pharmacies').html(`${formatNumber(regionData.medical.hospitals['2024'])}`);
+        $('#culturalFacilities-cultural').html(`${formatNumber(regionData.culturalFacilities.cultural['2022'])}`);
+        $('#culturalFacilities-socialWelfare').html(`${formatNumber(regionData.culturalFacilities.socialWelfare['2021'])}`);
+        $('#culturalFacilities-seniorLeisureWelfare').html(`${formatNumber(regionData.culturalFacilities.seniorLeisureWelfare['2023'])}`);
+
+        // 인구 현황
         displayPeopleChart(regionData.regionCharacteristics);
 
-        // 기타 추가 데이터 출력
-        //$('#productsProduction-fruits').html(`${regionData.productsProduction.fruits.toLocaleString()}kg`);
-        //$('#productsProduction-mushrooms').html(`${regionData.productsProduction.mushrooms.toLocaleString()}kg`);
+        // 날씨
+        displayTempChart(regionData.weather.temperature);
+        displayRainChart(regionData.weather.precipitation);
+
+        // 생산현황
+        displayWonChart(regionData.productsProduction);
+
+        // 부동산 정보(원/m2)
+        displayGreenZoneChart(regionData.realEstate.greenZone);
+        displayNonUrbanZoneChart(regionData.realEstate.nonUrbanZone);
     });
 });
+
+// 연도별 색상 설정 함수
+function getColorForYear(year) {
+    const colors = {
+        "2021": "#679951",
+        "2022": "#dfb162",
+        "2023": "#ed6d85",
+    };
+    return colors[year] || "#000000"; // 기본 색상
+}
+
+function formatNumber(value) {
+    if (value === 0) {
+        return '-'; // 값이 0이면 '-' 출력
+    }
+    return value.toLocaleString(); // 자릿수 구분 적용
+}
