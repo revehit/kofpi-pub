@@ -20,6 +20,20 @@ html {
 .ksc-wrap .guide-wrap.on {
   display: none;
 }
+.ksc-wrap .btn01 {
+  border-radius: 0 20px 0 20px;
+}
+.ksc-wrap .table_col {
+  background-color: transparent;
+}
+
+.ksc-wrap .table_col tbody th,
+.ksc-wrap .table_col tbody td {
+  color: #111;
+}
+.ksc-wrap .table_col thead tr:first-child th {
+  background: #f2ddc7;
+}
 
 /* box degign */
 .gray-box {
@@ -501,10 +515,9 @@ html {
   right: 0;
   top: 70%;
   transform: translateY(-50%);
-  border: 1px solid #3e9d39;
   border-radius: 10px;
   overflow: hidden;
-  background-color: #fff;
+  background-color: transparent;
   z-index: 9998;
 }
 .localpage-quickmenu .top-text {
@@ -515,6 +528,9 @@ html {
 }
 .localpage-quickmenu ul {
   padding: 20px 0;
+  border: 1px solid #3e9d39;
+  border-radius: 0 0 10px 10px;
+  background-color: #fff;
 }
 .localpage-quickmenu ul li + li {
   margin-top: 20px;
@@ -529,4 +545,17 @@ html {
 .localpage-quickmenu ul li a p {
   font-size: 14px;
   padding-top: 5px;
+}
+.localpage-quickmenu .top {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #373737;
+  border: 1px solid #fff;
+  color: #fff;
+  margin: 0 auto;
+  margin-top: 10px;
 }
