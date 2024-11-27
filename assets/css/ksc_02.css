@@ -75,21 +75,19 @@
   margin-bottom: 10px;
 }
 .ksc-box-item .box-con h4 span {
-  width: 50px;
-  height: 50px;
+  width: 37px;
+  height: 22px;
   position: absolute;
-  background-image: url(../images/icon/icon-quotes.png);
+  background-image: url(../images/icon/icon-quotes2.png);
   background-repeat: no-repeat;
-  background-size: 50px 50px;
+  background-size: contain;
 }
 .ksc-box-item .box-con h4 span.start {
-  left: -8px;
-  top: -25px;
+  left: -10px;
   transform: rotate(180deg);
 }
 .ksc-box-item .box-con h4 span.end {
-  right: 5;
-  top: -20px;
+  right: -10px;
 }
 .ksc-box-item .box-con .title {
   font-size: 20px;
@@ -121,6 +119,9 @@
   background-color: #db7d0f;
   border: 1px solid #db7d0f;
 }
+.ksc-box-item.orange .badge {
+  background-color: #db7d0f;
+}
 
 .ksc-box-item.lightgreen {
   background-color: #effbec;
@@ -139,6 +140,9 @@
 .ksc-box-item.lightgreen .btn01 {
   background-color: #1b7619;
   border: 1px solid #1b7619;
+}
+.ksc-box-item.lightgreen .badge {
+  background-color: #1b7619;
 }
 
 .ksc-box-item.lightblue {
@@ -159,6 +163,9 @@
   background-color: #2e6de1;
   border: 1px solid #2e6de1;
 }
+.ksc-box-item.lightblue .badge {
+  background-color: #2e6de1;
+}
 
 .ksc-box-item.purple {
   background-color: #f4effa;
@@ -177,16 +184,6 @@
 .ksc-box-item.purple .btn01 {
   background-color: #8e6be1;
   border: 1px solid #8e6be1;
-}
-
-.ksc-box-item.orange .badge {
-  background-color: #db7d0f;
-}
-.ksc-box-item.lightblue .badge {
-  background-color: #2e6de1;
-}
-.ksc-box-item.lightgreen .badge {
-  background-color: #1b7619;
 }
 .ksc-box-item.purple .badge {
   background-color: #8e6be1;
