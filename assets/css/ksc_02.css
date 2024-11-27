@@ -75,21 +75,19 @@
   margin-bottom: 10px;
 }
 .ksc-box-item .box-con h4 span {
-  width: 50px;
-  height: 50px;
+  width: 37px;
+  height: 22px;
   position: absolute;
-  background-image: url(../images/icon/icon-quotes.png);
+  background-image: url(../images/icon/icon-quotes2.png);
   background-repeat: no-repeat;
-  background-size: 50px 50px;
+  background-size: contain;
 }
 .ksc-box-item .box-con h4 span.start {
-  left: -8px;
-  top: -25px;
+  left: -10px;
   transform: rotate(180deg);
 }
 .ksc-box-item .box-con h4 span.end {
-  right: 5;
-  top: -20px;
+  right: -10px;
 }
 .ksc-box-item .box-con .title {
   font-size: 20px;
