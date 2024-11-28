@@ -1,3 +1,5 @@
+let originalRankedProducts;
+let originalPriority;
 $(document).ready(function () {
     /*
      * 지역 선택 Selectbox 설정
@@ -86,6 +88,16 @@ $(document).ready(function () {
 
         // Step3
         renderOrganizationLinks(regionData.supportSystem.organizations);
+
+        // 추천 임산물
+        originalPriority = [...regionData.recommendedForestProducts.priority];
+        originalRankedProducts = regionData.recommendedForestProducts.priority.map((item) =>
+            forestProducts.find((prod) => prod.name === item.product)
+        );
+
+        if (originalRankedProducts.length > 0) {
+           createForestProductBox(originalRankedProducts);
+        }
     });
 });
 
@@ -145,5 +157,144 @@ function renderMentors(mentorIds) {
     });
 
     $('#mentorList tbody').html(html);
+}
+
+// 추천 임산물 순위 HTML을 생성하는 함수
+function createForestProductBox(rankedProducts) {
+    const topProduct = rankedProducts[0]; // 1위 제품
+
+    // 가이드 및 매뉴얼 HTML 생성 함수
+    function generateSlideHtml(data, type) {
+        if (!data.image) return ''; // 데이터가 없으면 빈 문자열 반환
+        return `
+            <li>
+                <div class="img-box">
+                    <img src="${data.image}" alt="${type === 'manual' ? 'Manual' : 'Guide'}" />
+                </div>
+                <div class="slide_txt">
+                    <p>${topProduct.name} ${type === 'manual' ? '재배지침' : '재배·관리매뉴얼'}</p>
+                </div>
+                <div class="pdf-link">
+                    <a href="${data.pdf}" target="_blank" class="btn04_ss" title="새창 열림">
+                        보기<img class="ml_5" src="https://www.kofpi.or.kr/resources/images/common/buttons_icon.png" alt="" />
+                    </a>
+                    <a href="javascript:fnCommPdfDownload(${data.downloadSn})" class="btn04_ss" title="새창 열림">
+                       다운로드<img class="ml_5" src="https://www.kofpi.or.kr/resources/images/common/table_download_icon.png" alt="" />
+                   </a>
+                </div>
+            </li>`;
+    }
+
+    // 슬라이드 HTML 생성
+    const guideHtml = generateSlideHtml(topProduct.guide, 'guide');
+    const manualHtml = generateSlideHtml(topProduct.manual, 'manual');
+    const slideWrapHtml = guideHtml || manualHtml ? `
+        <div class="slide_wrap">
+            <ul class="slide_img">
+                ${guideHtml}
+                ${manualHtml}
+            </ul>
+        </div>` : '';
+
+    // 2위 이후 제품 HTML 생성
+    const otherRanksHtml = rankedProducts.slice(1) // 2위부터 시작
+        .map((product, index) => {
+            const rank = originalPriority.findIndex(item => item.product === product.name) + 1;
+            return `
+           <a href="javascript:void(0);" data-rank="${rank}">
+              <div class="thumbox">
+                <img src="${product.imageUrl}" alt="${product.name}" />
+                <p>${product.imageSource ? `출처 : ${product.imageSource}` : ''}</p>
+              </div>
+              <b>${rank}위 <span>${product.name}</span></b>
+            </a>`;
+        })
+        .join('');
+
+    const rankBoxHtml = `<div class="rank-box">${otherRanksHtml}</div>`;
+
+    // 추천 박스 HTML 생성
+    const recommendBoxHtml = `
+        <div class="recommend-box">
+            <h5>
+                임산물 ${originalPriority.findIndex(item => item.product === topProduct.name) + 1}위 <span>${topProduct.name}</span>
+            </h5>
+            <div class="recommend-inner">
+                <div class="image-box">
+                    <img src="${topProduct.imageUrl}" alt="${topProduct.name}" />
+                    <p>${topProduct.imageSource ? `출처 : ${topProduct.imageSource}` : ''}</p>
+                </div>
+                <div class="contents-box">
+                    ${rankBoxHtml}
+                    <ul>
+                        ${Object.values(topProduct.content).map((section, index) => `
+                            <li class="${index === 0 ? 'on' : ''}">
+                                <a href="javascript:void(0);">
+                                    <p class="top">${section.title}</p>
+                                    <em></em>
+                                </a>
+                                <div>${section.details.join('<br />')}</div>
+                            </li>`
+                        ).join('')}
+                    </ul>
+                </div>
+                ${slideWrapHtml}
+            </div>
+        </div>`;
+    $('#forest-products').html(recommendBoxHtml); // 부모 요소에 추가
+
+    setEventHandler();
+}
+
+
+
+// 클릭 이벤트 핸들러 설정
+function setEventHandler() {
+    try {
+        $(".contents-box ul").on("click", "li", function () {
+            if (!$(this).hasClass("on")) {
+                $(".contents-box ul li").removeClass("on");
+                $(this).addClass("on");
+            }
+        });
+    } catch (e) {
+        //
+    }
+
+    try {
+        $(".slide_img").bxSlider({
+            mode: "fade",
+            speed: 500,
+            pause: 3000,
+            infiniteLoop: true,
+            controls: true,
+            pager: false,
+        });
+    } catch (e) {
+        //
+    }
+
+    $('#forest-products .rank-box').on('click', 'a', function () {
+        const rank = $(this).data('rank');
+        const selectedProduct = originalRankedProducts[rank - 1]; // 선택된 상품 가져오기
+
+        // 배열 순서를 변경하여 1위 자리를 선택된 상품으로 업데이트
+        const updatedRankedProducts = originalRankedProducts.filter((_, idx) => idx !== rank - 1); // 선택된 상품을 제외한 나머지
+        updatedRankedProducts.unshift(selectedProduct); // 선택된 상품을 첫 번째로 이동
+
+        // 1위 자리 업데이트
+        createForestProductBox(updatedRankedProducts);
+    });
+}
+
+/**
+ * 파일 다운로드 이벤트
+ * @param seq
+ */
+function fnCommPdfDownload(seq){
+    $("#fileSeq").val(seq);
+    $("#downloadForm").attr("action", "https://www.kofpi.or.kr/attach/pdfDownload.do");
+    $("#downloadForm").attr("target", "_self");
+    $("#downloadForm").submit();
 }
 

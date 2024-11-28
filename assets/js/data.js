@@ -3,353 +3,1053 @@
  */
 const forestProducts = [
     {
+        sn: 1,
         name: '떫은감',
         code: 'astringent_persimmon',
-        usage: ['식용, 약용'],
-        cultivationEnvironment: [
-            '- 연평균기온: 12~15℃',
-            '- 연강수량: 1,200mm',
-            '- 토양특성: pH 5.5~6.0의 양토~식양토'
-        ],
-        income2023: [
-            '19,259천원/ha (평가액 - 경영비)',
-            '- 평가액: 29,325천원/ha, 경영비: 10,066천원/ha',
-            '※ 전국 평균값으로, 실제와 다를 수 있습니다.'
-        ],
-        imageUrl: '',
+        content: {
+            content1: {
+                title: '주 이용범위',
+                details: [
+                    '식용, 약용'
+                ]
+            },
+            content2: {
+                title: '재배환경',
+                details: [
+                    '- 연평균기온: 12~15℃',
+                    '- 연강수량: 1,200mm',
+                    '- 토양특성: pH 5.5~6.0의 양토~식양토'
+                ]
+            },
+            content3: {
+                title: '2023년 기준 소득액',
+                details: [
+                    '19,259천원/ha (평가액 - 경영비)',
+                    '- 평가액: 29,325천원/ha, 경영비: 10,066천원/ha',
+                    '※ 전국 평균값으로, 실제와 다를 수 있습니다.'
+                ]
+            }
+        },
+        imageUrl: '/assets/images/recommend-img/no_1.jpg',
         imageSource: '',
-        cultivationGuideUrl: '',
-        manualUrl: '',
+        guide: {
+            image: '/assets/images/pdf-slide-img/thum_1.jpg',
+            pdf: 'https://www.kofpi.or.kr/kofportal_att/repository/upload/pdf/temp6319788041554854265.pdf',
+            downloadSn: '9'
+        },
+        manual: {
+            image: '/assets/images/guide-img/guide_1.jpg',
+            pdf: 'https://www.kofpi.or.kr/kofportal_att/repository/upload/pdf/temp867482829288667673701. 감.pdf',
+            downloadSn: '575'
+        },
     },
     {
+        sn: 2,
         name: '생표고',
         code: 'fresh_shiitake',
-        usage: [],
-        cultivationEnvironment: [],
-        income2023: [],
-        imageUrl: '',
+        content: {
+            content1: {
+                title: '생리적 특성',
+                details: [
+                    '- 생육온도: 균사생장 5~35℃ / 자실체 형성 및 생육 5~28℃',
+                    '- 습도: 균사생장 90% 이상 / 자실체 형성 및 생육 80~95%',
+                    '- 재배시기: 4~6월, 9~11월이 적정'
+                ]
+            },
+            content2: {
+                title: '원목 선정',
+                details: [
+                    '활엽수 대부분이 가능하나 참나무류가 적합'
+                ]
+            }
+        },
+        imageUrl: '/assets/images/recommend-img/no_2.jpg',
         imageSource: '',
-        cultivationGuideUrl: '',
-        manualUrl: '',
+        guide: {
+            image: '/assets/images/pdf-slide-img/thum_2.jpg',
+            pdf: 'https://www.kofpi.or.kr/kofportal_att/repository/upload/pdf/temp73457169170950759802.알기쉬운 표고버섯 재배·관리 매뉴얼.pdf',
+            downloadSn: '40'
+        },
+        manual: {
+            image: '/assets/images/guide-img/guide_2.jpg',
+            pdf: 'https://www.kofpi.or.kr/kofportal_att/repository/upload/pdf/temp580889342159752982102. 표고버섯.pdf',
+            downloadSn: '574'
+        }
     },
     {
+        sn: 3,
         name: '참나물',
         code: 'chamnamul',
-        usage: [],
-        cultivationEnvironment: [],
-        income2023: [],
-        imageUrl: '',
+        content: {
+            content1: {
+                title: '재배환경',
+                details: [
+                    '- 온도: 기온 18~25℃, 지온 15~19℃',
+                    '- 습도: 대기습도 80%, 토양습도 70%',
+                    '- 토양: 배수가 잘 되고, 유기물 함량이 많은 양토~식양토',
+                    '- 일사: 햇볕이 강해도 잘 견디지만 그늘진 곳이 좋음'
+                ]
+            }
+        },
+        imageUrl: '/assets/images/recommend-img/no_3.jpg',
         imageSource: '',
-        cultivationGuideUrl: '',
-        manualUrl: '',
+        guide: {
+            image: '/assets/images/pdf-slide-img/thum_3.jpg',
+            pdf: 'https://www.kofpi.or.kr/kofportal_att/repository/upload/pdf/temp4738151276843559988.pdf',
+            downloadSn: '29'
+        },
+        manual: {
+            image: '/assets/images/guide-img/guide_3.jpg',
+            pdf: 'https://www.kofpi.or.kr/kofportal_att/repository/upload/pdf/temp335768287918162013103. 참나물.pdf',
+            downloadSn: '591'
+        }
     },
     {
+        sn: 4,
         name: '은행',
-        code: 'ginkgo_nut',
-        usage: [],
-        cultivationEnvironment: [],
-        income2023: [],
-        imageUrl: '',
+        code: 'ginkgo',
+        content: {
+            content1: {
+                title: '주 이용범위',
+                details: [
+                    '가로수, 목재, 약용'
+                ]
+            },
+            content2: {
+                title: '효능',
+                details: [
+                    '- 은행은 불안 및 조현병과 같은 정서 장애 증상을 완화하고, 뇌졸중 회복에 기여한다.',
+                    '- 눈의 혈류 개선을 돕는다.'
+                ]
+            },
+            content3: {
+                title: '재배환경',
+                details: [
+                    '- 일사: 햇볕이 드는 곳에서 잘 자란다.',
+                    '- 토양: 배수가 잘 되고, 비옥하고 평평한 땅에서 잘 자란다.'
+                ]
+            }
+        },
+        imageUrl: '/assets/images/recommend-img/no_4.jpg',
         imageSource: '',
-        cultivationGuideUrl: '',
-        manualUrl: '',
+        guide: {
+            image: '/assets/images/pdf-slide-img/thum_4.jpg',
+            pdf: 'https://www.kofpi.or.kr/kofportal_att/repository/upload/pdf/temp2592031889594292881.은행나무.pdf',
+            downloadSn: '45'
+        },
+        manual: {
+            image: '/assets/images/guide-img/guide_4.jpg',
+            pdf: 'https://www.kofpi.or.kr/kofportal_att/repository/upload/pdf/temp694648683790144375404. 은행나무.pdf',
+            downloadSn: '586'
+        }
     },
     {
+        sn: 5,
         name: '마',
         code: 'yam',
-        usage: [],
-        cultivationEnvironment: [],
-        income2023: [],
-        imageUrl: '',
+        content: {},
+        imageUrl: '/assets/images/recommend-img/no_5.jpg',
         imageSource: '',
-        cultivationGuideUrl: '',
-        manualUrl: '',
+        guide: {
+            image: '',
+            pdf: '',
+            downloadSn: ''
+        },
+        manual: {
+            image: '',
+            pdf: '',
+            downloadSn: ''
+        }
     },
     {
+        sn: 6,
         name: '잣',
         code: 'pine_nut',
-        usage: [],
-        cultivationEnvironment: [],
-        income2023: [],
-        imageUrl: '',
+        content: {
+            content1: {
+                title: '주 이용범위',
+                details: [
+                    '목재, 식용'
+                ]
+            },
+            content2: {
+                title: '재배환경',
+                details: [
+                    '- 한대성 수종으로 고산지대에 분포',
+                    '- 배수가 좋은 pH 4.7~5.5의 양토~미사질양토에서 잘 자란다.'
+                ]
+            }
+        },
+        imageUrl: '/assets/images/recommend-img/no_6.jpg',
         imageSource: '',
-        cultivationGuideUrl: '',
-        manualUrl: '',
+        guide: {
+            image: '',
+            pdf: '',
+            downloadSn: ''
+        },
+        manual: {
+            image: '/assets/images/guide-img/guide_6.jpg',
+            pdf: 'https://www.kofpi.or.kr/kofportal_att/repository/upload/pdf/temp845415369431981186406. 잣.pdf',
+            downloadSn: '582'
+        }
     },
     {
+        sn: 7,
         name: '취나물',
         code: 'chwinamul',
-        usage: [],
-        cultivationEnvironment: [],
-        income2023: [],
-        imageUrl: '',
+        content: {
+            content1: {
+                title: '주 이용범위',
+                details: [
+                    '식용'
+                ]
+            },
+            content2: {
+                title: '재배환경',
+                details: [
+                    '- 산간 들판, 양지 또는 반그늘에서 잘 자란다.',
+                    '- 대기습도가 높은 곳에서 연하고 큰 나물이 자란다.',
+                    '- 배수가 양호한 검은 모래함흙에서 잘 자란다.'
+                ]
+            }
+        },
+        imageUrl: '/assets/images/recommend-img/no_7.jpg',
         imageSource: '',
-        cultivationGuideUrl: '',
-        manualUrl: '',
+        guide: {
+            image: '/assets/images/pdf-slide-img/thum_7.jpg',
+            pdf: 'https://www.kofpi.or.kr/kofportal_att/repository/upload/pdf/temp7307678931276978295.pdf',
+            downloadSn: '30'
+        },
+        manual: {
+            image: '/assets/images/guide-img/guide_7_1.jpg',
+            pdf: 'https://www.kofpi.or.kr/kofportal_att/repository/upload/pdf/temp5401512528801262986취나물1.pdf',
+            downloadSn: '589'
+        }
     },
     {
+        sn: 8,
         name: '더덕',
         code: 'deodeok',
-        usage: [],
-        cultivationEnvironment: [],
-        income2023: [],
-        imageUrl: '',
+        content: {
+            content1: {
+                title: '주 이용범위',
+                details: [
+                    '약용'
+                ]
+            },
+            content2: {
+                title: '효능',
+                details: [
+                    '- 함유된 사포닌이 기관지 점액 분비를 향상시켜 폐와 기관지를 촉촉하게 한다.',
+                    '- 가래를 없애주고, 열을 내리는 효능이 있어 호흡기계 질환을 예방하거나 완화화는데 도움을 준다.',
+                    '- 비타민 B1, B2, B6, C 칼슘, 섬유질 등이 함유되어 피로를 쫓는데 좋다.'
+                ]
+            },
+            content3: {
+                title: '재배환경',
+                details: [
+                    '- 기후: 양지에서 재배하는 것이 좋다.',
+                    '- 환경: 연중기온이 30℃ 이하이고, 일조량이 길며, 공기유통이 잘 되고 일교차가 큰 곳에서 품질이 향상된다.',
+                    '- 토양: 토심이 30cm 이상이고, 배수가 잘 되며, pH 6.0 정도의 유기물 함량이 많은 사질 양토가 좋다.'
+                ]
+            }
+        },
+        imageUrl: '/assets/images/recommend-img/no_8.jpg',
         imageSource: '',
-        cultivationGuideUrl: '',
-        manualUrl: '',
+        guide: {
+            image: '/assets/images/pdf-slide-img/thum_8.jpg',
+            pdf: 'https://www.kofpi.or.kr/kofportal_att/repository/upload/pdf/temp2266602295604685916.pdf',
+            downloadSn: '13'
+        },
+        manual: {
+            image: '/assets/images/guide-img/guide_8.jpg',
+            pdf: 'https://www.kofpi.or.kr/kofportal_att/repository/upload/pdf/temp226729821803089771508. 더덕.pdf',
+            downloadSn: '579'
+        }
     },
     {
+        sn: 9,
         name: '고려엉겅퀴',
         code: 'korean_thistle',
-        usage: [],
-        cultivationEnvironment: [],
-        income2023: [],
-        imageUrl: '',
+        content: {
+            content1: {
+                title: '주 이용범위',
+                details: [
+                    '식용', '약용'
+                ]
+            },
+            content2: {
+                title: '재배환경',
+                details: [
+                    '- 기후: 햇빛을 많이 요구하는 양지성 식물이나 반그늘에도 적응',
+                    '- 온도: 18~25℃으로 서늘한 곳',
+                    '- 습도: 공중습도가 높은 곳',
+                    '- 토양: pH 5.5~6.5로 토심이 깊고, 배수가 양호하며 수분이 잘 보존되는 사양토'
+                ]
+            }
+        },
+        imageUrl: '/assets/images/recommend-img/no_9.jpg',
         imageSource: '',
-        cultivationGuideUrl: '',
-        manualUrl: '',
+        guide: {
+            image: '',
+            pdf: '',
+            downloadSn: ''
+        },
+        manual: {
+            image: '/assets/images/guide-img/guide_9.jpg',
+            pdf: 'https://www.kofpi.or.kr/kofportal_att/repository/upload/pdf/temp738163888170844309009. 고려엉겅퀴.pdf',
+            downloadSn: '572'
+        }
     },
     {
+        sn: 10,
         name: '도라지',
         code: 'balloon_flower_root',
-        usage: [],
-        cultivationEnvironment: [],
-        income2023: [],
-        imageUrl: '',
+        content: {
+            content1: {
+                title: '재배환경',
+                details: [
+                    '- 기후: 따뜻하고 습윤한 기후, 햇볕이 잘 드는 양지에서 잘 자람',
+                    '- 기온: 종자 발아적온 20~25℃ / 꽃눈 분화적온 15℃',
+                    '- 토양: 배수가 잘 되고, 토심이 깊고 유기물 함량이 많은 사양토 혹은 식양토'
+                ]
+            }
+        },
+        imageUrl: '/assets/images/recommend-img/no_10.jpg',
         imageSource: '',
-        cultivationGuideUrl: '',
-        manualUrl: '',
+        guide: {
+            image: '/assets/images/pdf-slide-img/thum_10.jpg',
+            pdf: 'https://www.kofpi.or.kr/kofportal_att/repository/upload/pdf/temp4222261464424846269.pdf',
+            downloadSn: '26'
+        },
+        manual: {
+            image: '/assets/images/guide-img/guide_10.jpg',
+            pdf: 'https://www.kofpi.or.kr/kofportal_att/repository/upload/pdf/temp382005770303501293210. 도라지.pdf',
+            downloadSn: '583'
+        }
     },
     {
+        sn: 11,
         name: '오미자',
         code: 'schisandra_berry',
-        usage: [],
-        cultivationEnvironment: [],
-        income2023: [],
-        imageUrl: '',
+        content: {
+            content1: {
+                title: '재배환경',
+                details: [
+                    '- 기후: 여름철 고온을 피할 수 있는 중부이북의 중산 고랭지가 재배적지이며, 양지식물로 화아분화기에 햇볕이 잘 들어야 함',
+                    '- 토양: 지하수위가 낮고 배수가 잘 되는 곳, pH 6.5 정도의 토양공극이 많은 양토나 사양토'
+                ]
+            },
+            content2: {
+                title: '2023년 기준 소득액',
+                details: [
+                    '9,864천원/ha (평가액 - 경영비)',
+                    '- 평가액: 23,944천원/ha, 경영비: 14,080천원/ha',
+                    '※ 전국 평균값으로, 실제와 다를 수 있습니다.'
+                ]
+            }
+        },
+        imageUrl: '/assets/images/recommend-img/no_11.jpg',
         imageSource: '',
-        cultivationGuideUrl: '',
-        manualUrl: '',
+        guide: {
+            image: '/assets/images/pdf-slide-img/thum_11.jpg',
+            pdf: 'https://www.kofpi.or.kr/kofportal_att/repository/upload/pdf/temp8639233386802033462.pdf',
+            downloadSn: '11'
+        },
+        manual: {
+            image: '/assets/images/guide-img/guide_11.jpg',
+            pdf: 'https://www.kofpi.or.kr/kofportal_att/repository/upload/pdf/temp505235104854983370911. 오미자.pdf',
+            downloadSn: '580'
+        }
     },
     {
+        sn: 12,
         name: '밤',
         code: 'chestnut',
-        usage: [],
-        cultivationEnvironment: [],
-        income2023: [],
-        imageUrl: '',
+        content: {
+            content1: {
+                title: '재배환경',
+                details: [
+                    '- 온도: 연평균기온 10~14℃',
+                    '- 환경: 해발고 400m 이하로 일교차와 서리피해가 적은 곳',
+                    '- 일사: 과실 결실에 25~30% 이상의 일조량이 필요',
+                    '- 토양: 지하수위가 1m 이하로 배수가 양호한 곳, 토심이 깊은 pH 5.0~5.5의 사질양토 또는 양토'
+
+                ]
+            },
+            content2: {
+                title: '2023년 기준 소득액',
+                details: [
+                    '1,485천원/ha (평가액 - 경영비)',
+                    '- 평가액: 3,288천원/ha, 경영비: 1,803천원/ha',
+                    '※ 전국 평균값으로, 실제와 다를 수 있습니다.'
+                ]
+            }
+        },
+        imageUrl: '/assets/images/recommend-img/no_12.jpg',
         imageSource: '',
-        cultivationGuideUrl: '',
-        manualUrl: '',
+        guide: {
+            image: '/assets/images/pdf-slide-img/thum_12.jpg',
+            pdf: 'https://www.kofpi.or.kr/kofportal_att/repository/upload/pdf/temp15373333050526576811.알기쉬운 밤나무 재배·관리 매뉴얼.pdf',
+            downloadSn: '43'
+        },
+        manual: {
+            image: '/assets/images/guide-img/guide_12.jpg',
+            pdf: 'https://www.kofpi.or.kr/kofportal_att/repository/upload/pdf/temp454899472214768969812. 밤.pdf',
+            downloadSn: '577'
+        }
     },
     {
+        sn: 13,
         name: '감초',
         code: 'licorice_root',
-        usage: [],
-        cultivationEnvironment: [],
-        income2023: [],
-        imageUrl: '',
+        content: {},
+        imageUrl: '/assets/images/recommend-img/no_13.jpg',
         imageSource: '',
-        cultivationGuideUrl: '',
-        manualUrl: '',
+        guide: {
+            image: '',
+            pdf: '',
+            downloadSn: ''
+        },
+        manual: {
+            image: '',
+            pdf: '',
+            downloadSn: ''
+        }
     },
     {
+        sn: 14,
         name: '독활',
         code: 'japanese_angelica',
-        usage: [],
-        cultivationEnvironment: [],
-        income2023: [],
-        imageUrl: '',
+        content: {},
+        imageUrl: '/assets/images/recommend-img/no_14.jpg',
         imageSource: '',
-        cultivationGuideUrl: '',
-        manualUrl: '',
+        guide: {
+            image: '',
+            pdf: '',
+            downloadSn: ''
+        },
+        manual: {
+            image: '',
+            pdf: '',
+            downloadSn: ''
+        }
     },
     {
+        sn: 15,
         name: '복분자딸기',
         code: 'korean_raspberry',
-        usage: [],
-        cultivationEnvironment: [],
-        income2023: [],
-        imageUrl: '',
+        content: {
+            content1: {
+                title: '주 이용범위',
+                details: [
+                    '식용', '약용'
+                ]
+            },
+            content2: {
+                title: '재배환경',
+                details: [
+                    '- 기후: 겨울철 일교차가 적고, 겨울철 기온이 급격히 내려가지 않는 곳',
+                    '- 일사: 햇볕이 많이 드는 곳일수록 과일의 당도와 품질을 높일 수 있음',
+                    '- 토양: 유기물이 풍부하며, 보수력이 높고, pH 5.5~6.5로 통기성이 좋은 곳'
+                ]
+            }
+        },
+        imageUrl: '/assets/images/recommend-img/no_15.jpg',
         imageSource: '',
-        cultivationGuideUrl: '',
-        manualUrl: '',
+        guide: {
+            image: '/assets/images/pdf-slide-img/thum_15.jpg',
+            pdf: 'https://www.kofpi.or.kr/kofportal_att/repository/upload/pdf/temp1852863387030993422복분자딸기.pdf',
+            downloadSn: '86'
+        },
+        manual: {
+            image: '/assets/images/guide-img/guide_15.jpg',
+            pdf: 'https://www.kofpi.or.kr/kofportal_att/repository/upload/pdf/temp531327402187431852515. 복분자딸기.pdf',
+            downloadSn: '587'
+        }
     },
     {
+        sn: 16,
         name: '천마',
         code: 'gastrodia_root',
-        usage: [],
-        cultivationEnvironment: [],
-        income2023: [],
-        imageUrl: '',
+        content: {
+            content1: {
+                title: '주 이용범위',
+                details: [
+                    '약용'
+                ]
+            },
+            content2: {
+                title: '재배환경',
+                details: [
+                    '- 기후: 자연에서 자생하는 천마는 해발 700m 이상의 고산지대에서 생장하나, 생육환경 조성 시 지역과 무관하게 인공재배 가능',
+                    '- 토양: 토심이 깊고, 비가 와도 물이 고이지 않으며, 배수가 양호한 pH 4.5~6.5의 양토~사양토',
+                    '- 사면방향: 동남향의 약간 경사진 곳'
+                ]
+            }
+        },
+        imageUrl: '/assets/images/recommend-img/no_16.jpg',
         imageSource: '',
-        cultivationGuideUrl: '',
-        manualUrl: '',
+        guide: {
+            image: '',
+            pdf: '',
+            downloadSn: ''
+        },
+        manual: {
+            image: '/assets/images/guide-img/guide_16.jpg',
+            pdf: 'https://www.kofpi.or.kr/kofportal_att/repository/upload/pdf/temp54381762289460624816. 천마.pdf',
+            downloadSn: '593'
+        }
     },
     {
+        sn: 17,
         name: '황칠나무',
         code: 'dendropanax_tree',
-        usage: [],
-        cultivationEnvironment: [],
-        income2023: [],
-        imageUrl: '',
-        imageSource: '',
-        cultivationGuideUrl: '',
-        manualUrl: '',
+        content: {
+            content1: {
+                title: '주 이용범위',
+                details: [
+                    '목공예품', '약용'
+                ]
+            },
+            content2: {
+                title: '재배환경',
+                details: [
+                    '- 온도: 월평균 최저기온이 2℃ 이상',
+                    '- 강우량: 연평균 강우량 1,325mm 이상',
+                    '- 토양: 토양수분이 많고 공기유통이 좋은 비옥지로 표토가 깊고 배수가 잘 되며 부식질이 많은 사질양토'
+                ]
+            }
+        },
+        imageUrl: '/assets/images/recommend-img/no_17.jpg',
+        imageSource: '국가유산청',
+        guide: {
+            image: '/assets/images/pdf-slide-img/thum_17.jpg',
+            pdf: 'https://www.kofpi.or.kr/kofportal_att/repository/upload/pdf/temp1169298507652370027.pdf',
+            downloadSn: '34'
+        },
+        manual: {
+            image: '/assets/images/guide-img/guide_17.jpg',
+            pdf: 'https://www.kofpi.or.kr/kofportal_att/repository/upload/pdf/temp45327290239919066817. 황칠나무.pdf',
+            downloadSn: '596'
+        }
     },
     {
+        sn: 18,
         name: '산딸기',
         code: 'wild_raspberry',
-        usage: [],
-        cultivationEnvironment: [],
-        income2023: [],
-        imageUrl: '',
-        imageSource: '',
-        cultivationGuideUrl: '',
-        manualUrl: '',
+        content: {
+            content1: {
+                title: '2023년 기준 소득액',
+                details: [
+                    '27,452천원/ha (평가액 - 경영비)',
+                    '- 평가액: 41,485천원/ha, 경영비: 14,033천원/ha',
+                    '※ 전국 평균값으로, 실제와 다를 수 있습니다.'
+                ]
+            }
+        },
+        imageUrl: '/assets/images/recommend-img/no_18.jpg',
+        imageSource: '클립아트코리아',
+        guide: {
+            image: '',
+            pdf: '',
+            downloadSn: ''
+        },
+        manual: {
+            image: '',
+            pdf: '',
+            downloadSn: ''
+        }
     },
     {
+        sn: 19,
         name: '작약',
         code: 'peony_root',
-        usage: [],
-        cultivationEnvironment: [],
-        income2023: [],
-        imageUrl: '',
+        content: {
+            content1: {
+                title: '재배환경',
+                details: [
+                    '- 기후: 서늘한 곳',
+                    '- 토양: 토양수분이 적당하고 배수가 잘 되는 비옥한 사양토~식양토'
+                ]
+            }
+        },
+        imageUrl: '/assets/images/recommend-img/no_19.jpg',
         imageSource: '',
-        cultivationGuideUrl: '',
-        manualUrl: '',
+        guide: {
+            image: '',
+            pdf: '',
+            downloadSn: ''
+        },
+        manual: {
+            image: '/assets/images/guide-img/guide_19.jpg',
+            pdf: 'https://www.kofpi.or.kr/kofportal_att/repository/upload/pdf/temp94946085370467927919. 작약.pdf',
+            downloadSn: '588'
+        }
     },
     {
+        sn: 20,
         name: '대추',
         code: 'jujube',
-        usage: [],
-        cultivationEnvironment: [],
-        income2023: [],
-        imageUrl: '',
+        content: {
+            content1: {
+                title: '주 이용범위',
+                details: [
+                    '식용', '약용'
+                ]
+            },
+            content2: {
+                title: '재배환경',
+                details: [
+                    '- 기후대: 해안지대를 제외한 표고 500m 이하의 지역',
+                    '- 온도: 연평균 기온 8℃ 이상 / 최저기온 -27℃ 이상',
+                    '- 토양: 토심이 깊고 배수가 잘 되며 통기성이 좋은 사질양토 또는 자갈이 섞인 양토'
+                ]
+            },
+            content3: {
+                title: '2023년 기준 소득액',
+                details: [
+                    '19,344천원/ha (평가액 - 경영비)',
+                    '- 평가액: 31,956천원/ha, 경영비: 12,612천원/ha',
+                    '※ 전국 평균값으로, 실제와 다를 수 있습니다.'
+                ]
+            }
+        },
+        imageUrl: '/assets/images/recommend-img/no_20.jpg',
         imageSource: '',
-        cultivationGuideUrl: '',
-        manualUrl: '',
+        guide: {
+            image: '/assets/images/pdf-slide-img/thum_20.jpg',
+            pdf: 'https://www.kofpi.or.kr/kofportal_att/repository/upload/pdf/temp7166815777518762916.pdf',
+            downloadSn: '10'
+        },
+        manual: {
+            image: '',
+            pdf: '',
+            downloadSn: ''
+        }
     },
     {
+        sn: 21,
         name: '천궁',
         code: 'cnidium_rhizome',
-        usage: [],
-        cultivationEnvironment: [],
-        income2023: [],
-        imageUrl: '',
+        content: {
+            content1: {
+                title: '재배환경',
+                details: [
+                    '- 기후: 일교차가 큰 산간지나 해발 400m 내외의 준고랭지',
+                    '- 온도: 여름철 최고기온이 30℃를 넘지 않는 곳',
+                    '- 토양: 부식질이 많고 물빠짐이 양호하며 수분보전력이 좋고 비옥한 양토~식토'
+                ]
+            }
+        },
+        imageUrl: '/assets/images/recommend-img/no_21.jpg',
         imageSource: '',
-        cultivationGuideUrl: '',
-        manualUrl: '',
+        guide: {
+            image: '',
+            pdf: '',
+            downloadSn: ''
+        },
+        manual: {
+            image: '/assets/images/guide-img/guide_21.jpg',
+            pdf: 'https://www.kofpi.or.kr/kofportal_att/repository/upload/pdf/temp779298851409424206721. 천궁.pdf',
+            downloadSn: '598'
+        }
     },
     {
+        sn: 22,
         name: '당귀',
         code: 'angelica_root',
-        usage: [],
-        cultivationEnvironment: [],
-        income2023: [],
-        imageUrl: '',
+        content: {},
+        imageUrl: '/assets/images/recommend-img/no_22.jpg',
         imageSource: '',
-        cultivationGuideUrl: '',
-        manualUrl: '',
+        guide: { image: '', pdf: '', downloadSn: '' },
+        manual: { image: '', pdf: '', downloadSn: '' }
     },
     {
+        sn: 23,
         name: '산마늘',
         code: 'wild_garlic',
-        usage: [],
-        cultivationEnvironment: [],
-        income2023: [],
-        imageUrl: '',
+        content: {
+            content1: {
+                title: '재배환경',
+                details: [
+                    '- 기후: 해발 1,000m 이상의 높은 산의 풀밭, 비교적 서늘한 가운데 다소 습기가 유지되는 환경에서 군락으로 분포',
+                    '- 토양: 경사도 7% 이하의 평탄지, 곡간지로 토심 100cm 이상의 배수가 잘 되는 사양토~양토',
+                    '- 일사: 봄철은 햇볕을 충분히 받아 따뜻하고, 여름철엔 그늘지며, 가을에 따뜻한 곳'
+                ]
+            }
+        },
+        imageUrl: '/assets/images/recommend-img/no_23.jpg',
         imageSource: '',
-        cultivationGuideUrl: '',
-        manualUrl: '',
+        guide: {
+            image: '/assets/images/pdf-slide-img/thum_23.jpg',
+            pdf: 'https://www.kofpi.or.kr/kofportal_att/repository/upload/pdf/temp70824265164698913554-1.알기쉬운 산마늘 재배·관리 매뉴얼.pdf',
+            downloadSn: '36'
+        },
+        manual: {
+            image: '/assets/images/guide-img/guide_23.jpg',
+            pdf: 'https://www.kofpi.or.kr/kofportal_att/repository/upload/pdf/temp908277884530654604123. 산마늘.pdf',
+            downloadSn: '585'
+        }
     },
     {
+        sn: 24,
         name: '죽순',
         code: 'bamboo_shoot',
-        usage: [],
-        cultivationEnvironment: [],
-        income2023: [],
-        imageUrl: '',
-        imageSource: '',
-        cultivationGuideUrl: '',
-        manualUrl: '',
+        content: {
+            content1: {
+                title: '주 이용범위',
+                details: [
+                    '식용','약용'
+                ]
+            },
+            content2: {
+                title: '재배환경',
+                details: [
+                    '- 온도: 연평균기온 10℃ 이상 / 연중 최저기온 -10℃ 이하',
+                    '- 연강수량: 1,000mm 이상',
+                    '- 토양: 토심 60cm 이상, 배수가 잘 되는 사질양토 또는 역질 상토'
+                ]
+            }
+        },
+        imageUrl: '/assets/images/recommend-img/no_24.jpg',
+        imageSource: '클립아트코리아',
+        guide: {
+            image: '',
+            pdf: '',
+            downloadSn: ''
+        },
+        manual: {
+            image: '/assets/images/guide-img/guide_24.jpg',
+            pdf: 'https://www.kofpi.or.kr/kofportal_att/repository/upload/pdf/temp361681015168323553524. 죽순.pdf',
+            downloadSn: '597'
+        }
     },
     {
+        sn: 25,
         name: '고사리',
         code: 'bracken_fern',
-        usage: [],
-        cultivationEnvironment: [],
-        income2023: [],
-        imageUrl: '',
+        content: {
+            content1: {
+                title: '주 이용범위',
+                details: [
+                    '식용'
+                ]
+            },
+            content2: {
+                title: '재배환경',
+                details: [
+                    '- 기후: 양지~음지, 건조~습윤 등 환경조건이 나쁜 조건에서도 잘 자라나, 대기가 오염된 지역에선 생장하지 못함',
+                    '- 온도: 17~18℃에서 새싹이 돋아나 잘 자라지만, 30℃ 이상이 되면 잎과 줄기가 빨리 굳어짐',
+                    ' - 토양: 배수가 잘 되고 부식질이 많은 비옥한 양토로, 나뭇잎이 많고 물기가 적당한 곳'
+                ]
+            }
+        },
+        imageUrl: '/assets/images/recommend-img/no_25.jpg',
         imageSource: '',
-        cultivationGuideUrl: '',
-        manualUrl: '',
+        guide: {
+            image: '/assets/images/pdf-slide-img/thum_25.jpg',
+            pdf: 'https://www.kofpi.or.kr/kofportal_att/repository/upload/pdf/temp6400901041634701159.pdf',
+            downloadSn: '25'
+        },
+        manual: {
+            image: '/assets/images/guide-img/guide_25.jpg',
+            pdf: 'https://www.kofpi.or.kr/kofportal_att/repository/upload/pdf/temp835351590841816817925. 고사리.pdf',
+            downloadSn: '576'
+        }
     },
     {
+        sn: 26,
         name: '하수오',
         code: 'fo_ti_root',
-        usage: [],
-        cultivationEnvironment: [],
-        income2023: [],
-        imageUrl: '',
+        content: {
+            content1: {
+                title: '주 이용범위',
+                details: [
+                    '약용'
+                ]
+            },
+            content2: {
+                title: '재배환경',
+                details: [
+                    '- 기후: 서늘한 기후 조건에서 덩이뿌리 비대가 잘 되며, 햇볕이 잘 드는 곳과 통풍이 좋은 곳에서 재배할 수 있음',
+                    '- 토양: 배수가 잘 되고, 유기물이 많으며, 토심 30~40cm 정도의 비옥한 사질양토 또는 퇴적도'
+                ]
+            }
+        },
+        imageUrl: '/assets/images/recommend-img/no_26.jpg',
         imageSource: '',
-        cultivationGuideUrl: '',
-        manualUrl: '',
+        guide: {
+            image: '',
+            pdf: '',
+            downloadSn: ''
+        },
+        manual: {
+            image: '/assets/images/guide-img/guide_26.jpg',
+            pdf: 'https://www.kofpi.or.kr/kofportal_att/repository/upload/pdf/temp658636784376998574126. 하수오.pdf',
+            downloadSn: '595'
+        }
     },
     {
-        name: '눈개승마',
+        sn: 27,
+        name: '기타산나물',
         code: 'false_spikenard',
-        usage: [],
-        cultivationEnvironment: [],
-        income2023: [],
-        imageUrl: '',
-        imageSource: '',
-        cultivationGuideUrl: '',
-        manualUrl: '',
+        content: {},
+        imageUrl: '/assets/images/recommend-img/no_27.jpg',
+        imageSource: '눈개승마',
+        guide: { image: '', pdf: '', downloadSn: '' },
+        manual: { image: '', pdf: '', downloadSn: '' }
     },
     {
-        name: '꽃송이버섯',
+        sn: 28,
+        name: '기타버섯류',
         code: 'cauliflower_mushroom',
-        usage: [],
-        cultivationEnvironment: [],
-        income2023: [],
-        imageUrl: '',
-        imageSource: '',
-        cultivationGuideUrl: '',
-        manualUrl: '',
+        content: {},
+        imageUrl: '/assets/images/recommend-img/no_28.jpg',
+        imageSource: '꽃송이버섯',
+        guide: { image: '', pdf: '', downloadSn: '' },
+        manual: { image: '', pdf: '', downloadSn: '' }
     },
     {
+        sn: 29,
         name: '건표고',
         code: 'dried_shiitake',
-        usage: [],
-        cultivationEnvironment: [],
-        income2023: [],
-        imageUrl: '',
+        content: {
+            content1: {
+                title: '생리적 특성',
+                details: [
+                    '- 생육온도: 균사생장 5~35℃ / 자실체 형성 및 생육 5~28℃',
+                    '- 습도: 균사생장 90% 이상 / 자실체 형성 및 생육 80~95%',
+                    '- 재배시기: 4~6월, 9~11월이 적정'
+                ]
+            },
+            content2: {
+                title: '원목 선정',
+                details: [
+                    '활엽수 대부분이 가능하나 참나무류가 적합'
+                ]
+            }
+        },
+        imageUrl: '/assets/images/recommend-img/no_29.jpg',
         imageSource: '',
-        cultivationGuideUrl: '',
-        manualUrl: '',
+        guide: {
+            image: '/assets/images/pdf-slide-img/thum_29.jpg',
+            pdf: 'https://www.kofpi.or.kr/kofportal_att/repository/upload/pdf/temp73457169170950759802.알기쉬운 표고버섯 재배·관리 매뉴얼.pdf',
+            downloadSn: '40'
+        },
+        manual: {
+            image: '/assets/images/guide-img/guide_29.jpg',
+            pdf: 'https://www.kofpi.or.kr/kofportal_att/repository/upload/pdf/temp580889342159752982102. 표고버섯.pdf',
+            downloadSn: '574'
+        }
     },
     {
+        sn: 30,
         name: '구기자',
         code: 'goji_berry',
-        usage: [],
-        cultivationEnvironment: [],
-        income2023: [],
-        imageUrl: '',
+        content: {
+            content1: {
+                title: '재배환경',
+                details: [
+                    '- 온도: 7~8월의 평균기온 20~25℃',
+                    '- 일사: 풍부한 곳',
+                    '- 토양: 배수가 양호하고 보수력이 좋은 사양토~식양토'
+                ]
+            },
+            content2: {
+                title: '2023년 기준 소득액',
+                details: [
+                    '19,014천원/ha (평가액 - 경영비)',
+                    '- 평가액: 33,108천원/ha, 경영비: 14,094천원/ha',
+                    '※ 전국 평균값으로, 실제와 다를 수 있습니다.'
+                ]
+            }
+        },
+        imageUrl: '/assets/images/recommend-img/no_30.jpg',
         imageSource: '',
-        cultivationGuideUrl: '',
-        manualUrl: '',
+        guide: {
+            image: '/assets/images/pdf-slide-img/thum_30.jpg',
+            pdf: 'https://www.kofpi.or.kr/kofportal_att/repository/upload/pdf/temp4989754370235799190.pdf',
+            downloadSn: '12'
+        },
+        manual: {
+            image: '/assets/images/guide-img/guide_30.jpg',
+            pdf: 'https://www.kofpi.or.kr/kofportal_att/repository/upload/pdf/temp139398434204143743030. 구기자.pdf',
+            downloadSn: '573'
+        }
     },
     {
+        sn: 31,
         name: '오갈피',
         code: 'siberian_ginseng',
-        usage: [],
-        cultivationEnvironment: [],
-        income2023: [],
-        imageUrl: '',
+        content: {
+            content1: {
+                title: '효능',
+                details: [
+                    '- 오갈피의 근피와 수피는 강장, 이뇨, 노쇠방지, 항피로작용, 진통, 성기능 활성화, 항암작용 등에 효과를 나타낸다.',
+                    '- 그 외 생체기관의 전반적인 기능증대, 중추신경작용, 근육운동보조작용, 대사촉진작용, 동맥혈압 정상화, 해독작용 등의 생리적 작용이 보고되고 있다.'
+                ]
+            },
+            content2: {
+                title: '재배환경',
+                details: [
+                    '- 기후: 해발 500~1,000m의 배수가 잘 되는 산록 경사지에서 잘 자란다.',
+                    '- 일사: 햇볕이 잘 드는 입지를 선호하나, 반양 또는 반음지인 곳에서도 잘 자란다.',
+                    '- 토양: 습윤하고 부식질 층이 깊은 미산성 토양의 잡목 아래나 산자락에서 잘 자란다.'
+                ]
+            },
+            content3: {
+                title: '2023년 기준 소득액',
+                details: [
+                    '4,239천원/ha (평가액 - 경영비)',
+                    '- 평가액: 13,254천원/ha, 경영비: 9,015천원/ha',
+                    '※ 전국 평균값으로, 실제와 다를 수 있습니다.'
+                ]
+            }
+        },
+        imageUrl: '/assets/images/recommend-img/no_31.jpg',
         imageSource: '',
-        cultivationGuideUrl: '',
-        manualUrl: '',
+        guide: {
+            image: '',
+            pdf: '',
+            downloadSn: ''
+        },
+        manual: {
+            image: '/assets/images/guide-img/guide_31.jpg',
+            pdf: 'https://www.kofpi.or.kr/kofportal_att/repository/upload/pdf/temp388181095864273234331. 오갈피나무.pdf',
+            downloadSn: '581'
+        }
+    },
+    {
+        sn: 32,
+        name: '꾸지뽕나무',
+        code: 'kiwifruit',
+        content: {},
+        imageUrl: '/assets/images/recommend-img/no_32.jpg',
+        imageSource: '',
+        guide: { image: '', pdf: '', downloadSn: '' },
+        manual: { image: '', pdf: '', downloadSn: '' }
+    },
+    {
+        sn: 33,
+        name: '호두',
+        code: 'walnut',
+        content: {
+            content1: {
+                title: '재배환경',
+                details: [
+                    '- 기후: 여름철에는 서늘하고 겨울에는 온화한 산간지방으로 비가 적고 북서풍의 맞바람이 불지 않으며 습기가 적은 곳',
+                    '- 토양: 토심 1.5~2m 이상으로 깊고 비옥하며 배수가 잘 되고, 통기성이 좋은 사질양토 및 양토'
+                ]
+            },
+            content2: {
+                title: '2023년 기준 소득액',
+                details: [
+                    '8,874천원/ha (평가액 - 경영비)',
+                    '- 평가액: 12,628천원/ha, 경영비: 3,753천원/ha',
+                    '※ 전국 평균값으로, 실제와 다를 수 있습니다.'
+                ]
+            }
+        },
+        imageUrl: '/assets/images/recommend-img/no_33.jpg',
+        imageSource: '',
+        guide: {
+            image: '/assets/images/pdf-slide-img/thum_33.jpg',
+            pdf: 'https://www.kofpi.or.kr/kofportal_att/repository/upload/pdf/temp54015126272282851673.알기쉬운 호두나무 재배·관리 매뉴얼.pdf',
+            downloadSn: '41'
+        },
+        manual: {
+            image: '/assets/images/guide-img/guide_33.jpg',
+            pdf: 'https://www.kofpi.or.kr/kofportal_att/repository/upload/pdf/temp487472840848138561133. 호두나무.pdf',
+            downloadSn: '584'
+        }
+    },
+    {
+        sn: 34,
+        name: '두릅',
+        code: 'wild_ginseng',
+        content: {
+            content1: {
+                title: '재배환경',
+                details: [
+                    '- 기후: 평지부터 해발 1.000m 이상의 고지대까지 자생하며, 내한성이 강하고, 양지식물로서 햇볕이 잘 드는 곳에서 잘 자람',
+                    '- 토양: 토심이 깊고, 배수가 잘 되며, 자갈토양 혹은 미사토가 많이 섞인 pH 5.1~5.8의 사질양토',
+                    '- 지형: 계곡이나 산복부의 북향 또는 북동향으로, 경사 15~30˚인 곳'
+                ]
+            }
+        },
+        imageUrl: '/assets/images/recommend-img/no_34.jpg',
+        imageSource: '',
+        guide: {
+            image: '/assets/images/pdf-slide-img/thum_34.jpg',
+            pdf: 'https://www.kofpi.or.kr/kofportal_att/repository/upload/pdf/temp485323548196335780534. 두릅.pdf',
+            downloadSn: '599'
+        },
+        manual: {
+            image: '/assets/images/guide-img/guide_34.jpg',
+            pdf: 'https://www.kofpi.or.kr/kofportal_att/repository/upload/pdf/temp104228274552938708834. 두릅.pdf',
+            downloadSn: '592'
+        }
+    },
+    {
+        sn: 35,
+        name: '다래',
+        code: 'kiwi',
+        content: {
+            content1: {
+                title: '주 이용범위',
+                details: [
+                    '식용, 약용'
+                ]
+            },
+            content2: {
+                title: '효능',
+                details: [
+                    '신경통, 이뇨, 강심, 강장, 괴혈병 예방 등'
+                ]
+            },
+            content3: {
+                title: '재배환경',
+                details: [
+                    '- 기후: 눈과 추위에 강하나 서리와 가뭄 피해에 약하며, 건조할 경우 생장이 떨어짐',
+                    '- 일사: 일조시간 중 1/2는 양지이고, 1/2는 음지가 되는 곳',
+                    '- 토양: 통기성, 보수력, 배수력이 좋고 부드려우며, 토심이 깊은 비옥한 양토',
+                    '- 지형: 바람이 막힌 남쪽사면으로 계곡부위의 밭 또는 폐경작지, 산록지'
+                ]
+            }
+        },
+        imageUrl: '/assets/images/recommend-img/no_35.jpg',
+        imageSource: '',
+        guide: {
+            image: '/assets/images/pdf-slide-img/thum_35.jpg',
+            pdf: 'https://www.kofpi.or.kr/kofportal_att/repository/upload/pdf/temp34235254663044521213.다래.pdf',
+            downloadSn: '38'
+        },
+        manual: {
+            image: '/assets/images/guide-img/guide_35.jpg',
+            pdf: 'https://www.kofpi.or.kr/kofportal_att/repository/upload/pdf/temp497792531381246647535. 다래.pdf',
+            downloadSn: '594'
+        }
+    },
+    {
+        sn: 36,
+        name: '송이',
+        code: 'matsutake',
+        content: {},
+        imageUrl: '/assets/images/recommend-img/no_36.jpg',
+        imageSource: '',
+        guide: { image: '', pdf: '', downloadSn: '' },
+        manual: { image: '', pdf: '', downloadSn: '' }
+    },
+    {
+        sn: 37,
+        name: '약모밀',
+        code: 'houttuynia',
+        content: {},
+        imageUrl: '/assets/images/recommend-img/no_37.jpg',
+        imageSource: '',
+        guide: { image: '', pdf: '', downloadSn: '' },
+        manual: { image: '', pdf: '', downloadSn: '' }
     },
 ];
 
