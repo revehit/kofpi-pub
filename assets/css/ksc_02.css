@@ -270,3 +270,41 @@
   border-radius: 50%;
   opacity: 0.2;
 }
+
+/* media quary */
+@media screen and (max-width: 1500px) {
+}
+@media screen and (max-width: 1200px) {
+  .ksc-box-item {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .ksc-box-item {
+    gap: 40px;
+    padding: 10px;
+  }
+  .ksc-box-item .box-con h4 {
+    font-size: 20px;
+  }
+  .ksc-box-item .box-con h4 span {
+    width: 25px;
+    height: 15px;
+  }
+  .ksc-box-item .box-con h4 span.start {
+    margin-right: 5px;
+  }
+  .ksc-box-item .box-con h4 span.end {
+    margin-left: 5px;
+  }
+  .ksc-box-item .box-con {
+    padding: 10px;
+  }
+  .ksc-box-item .box-con .title {
+    font-size: 18px;
+  }
+  .ksc-box-item .box-con .btn01 {
+    padding: 10px;
+  }
+}
