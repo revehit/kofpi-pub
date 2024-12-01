@@ -1919,7 +1919,7 @@
                           </p>
                         </div>
                         <div class="chartbox">
-                          <div class="box" style="width: 100%; height: 380px">
+                          <div class="box">
                             <canvas id="peopleChart"></canvas>
                           </div>
                         </div>
@@ -1933,23 +1933,20 @@
                       <div class="botbox">
                         <div class="chartbox">
                           <p class="box-title">월평균 기온(℃)</p>
-                          <div class="box" style="width: 100%; height: 380px">
+                          <div class="box">
                             <canvas id="tempChart"></canvas>
                           </div>
                         </div>
                         <div class="chartbox">
                           <p class="box-title">월 강수량(mm)</p>
-                          <div class="box" style="width: 100%; height: 380px">
+                          <div class="box">
                             <canvas id="rainChart"></canvas>
                           </div>
                         </div>
                         <div class="chartbox">
                           <p class="box-title">임산물 종류별 생산 현황</p>
-                          <div class="box" style="width: 100%; height: 380px">
-                            <canvas
-                              id="wonChart"
-                              style="margin: 0 auto; height: 380px"
-                            ></canvas>
+                          <div class="box" style="overflow: hidden">
+                            <canvas id="wonChart"></canvas>
                           </div>
                         </div>
                         <div class="data-box">
@@ -2131,7 +2128,7 @@
                         <div class="chartbox">
                           <p class="box-title">녹지지역</p>
 
-                          <div class="box" style="width: 100%; height: 380px">
+                          <div class="box">
                             <canvas id="estateChart1"></canvas>
                           </div>
                           <!--
@@ -2141,7 +2138,7 @@
                         </div>
                         <div class="chartbox">
                           <p class="box-title">비도시지역</p>
-                          <div class="box" style="width: 100%; height: 380px">
+                          <div class="box">
                             <canvas id="estateChart2"></canvas>
                           </div>
                           <!--
@@ -2154,9 +2151,14 @@
                   </div>
                   <!-- step2 -->
                   <div id="step2" class="go_box localbox-wrap">
-                    <p class="sub_title">
+                    <p class="sub_title with_btn">
                       Step 2. 지역의 주요 임산물 알아보기
-                      <a href="https://www.kofpi.or.kr/info/tech_03.do" class="btn01" target="blank;" title="새창열기">
+                      <a
+                        href="https://www.kofpi.or.kr/info/tech_03.do"
+                        class="btn01"
+                        target="blank;"
+                        title="새창열기"
+                      >
                         인근 지역 임산물 정보
                       </a>
                     </p>
@@ -2741,6 +2743,10 @@
           controls: true,
           pager: false,
         });
+
+        $(".localpage-quickmenu .top-text").click(function () {
+          $(".localpage-quickmenu").toggleClass("on");
+        });
       });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -3054,7 +3060,7 @@
         }
       }
     </script>
-    <form id="downloadForm" name="form" method="post" style="display:none;">
+    <form id="downloadForm" name="form" method="post" style="display: none">
       <input type="hidden" id="fileSeq" name="fileSeq" />
     </form>
   </body>
