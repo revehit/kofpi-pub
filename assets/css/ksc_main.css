@@ -4,3 +4,17 @@
 .main_service_list ul li {
   width: 16%;
 }
+
+@media screen and (max-width: 1700px) {
+  .main_board_wrap.min {
+    width: 100%;
+  }
+  .main_service_list ul li {
+    width: 250px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .main_service_list ul li {
+    width: 25vw;
+  }
+}
