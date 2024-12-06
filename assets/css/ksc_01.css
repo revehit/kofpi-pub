@@ -200,6 +200,9 @@ html {
   width: 70px;
   text-align: center;
 }
+.localbox-wrap .card-wrap.row .card .text-box p {
+  word-break: keep-all;
+}
 .localbox-wrap .card-wrap.row .card .text-box strong {
   font-size: 30px;
 }
