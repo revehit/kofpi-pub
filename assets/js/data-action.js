@@ -193,10 +193,10 @@ function renderMentors(mentorIds) {
   );
 
   let html = ""; // HTML 문자열 초기화
-  filteredMentors.forEach((mentor) => {
+  filteredMentors.forEach((mentor, index) => {
     html += `
             <tr>
-                <td class="nobor_l">${mentor.id}</td>
+                <td class="nobor_l">${index + 1}</td>
                 <td>${mentor.name}</td>
                 <td>${mentor.mainField}</td>
                 <td>${mentor.subItems}</td>
