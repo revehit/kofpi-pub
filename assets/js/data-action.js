@@ -45,9 +45,6 @@ $(document).ready(function () {
       return false;
     }
 
-    // 데이터가 존재하는 경우 원하는 동작 수행
-    console.log(regionData);
-
     // 인구 현황
     $("h4.content_title").html(
       `${selectedParent} ${selectedRegion}의 주요 특징`
@@ -137,6 +134,10 @@ $(document).ready(function () {
 
     // 멘토
     renderMentors(regionData.supportSystem.mento);
+
+    // 지역별 임산물 링크 변경
+    const matchingLocation = locationData.find(loc => loc.name === selectedParent);
+    $("#locationBtn").attr("href", matchingLocation.pdf);
 
     // Step3
     renderOrganizationLinks(regionData.supportSystem.organizations);
