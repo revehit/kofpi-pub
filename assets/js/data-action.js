@@ -107,7 +107,7 @@ $(document).ready(function () {
       `${formatNumber(regionData.medical.hospitals["2024"])}`
     );
     $("#medical-pharmacies").html(
-      `${formatNumber(regionData.medical.hospitals["2024"])}`
+      `${formatNumber(regionData.medical.pharmacies["2024"])}`
     );
     $("#culturalFacilities-cultural").html(
       `${formatNumber(regionData.culturalFacilities.cultural["2022"])}`
