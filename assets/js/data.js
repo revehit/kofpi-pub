@@ -20508,3 +20508,18 @@ const mentors = [
     ],
   },
 ];
+
+const locationData = [
+  { name: "부산광역시", pdf: "./assets/images/location-data/bs.pdf" },
+  { name: "대구광역시", pdf: "./assets/images/location-data/dg.pdf" },
+  { name: "인천광역시", pdf: "./assets/images/location-data/ic.pdf" },
+  { name: "울산광역시", pdf: "./assets/images/location-data/ws.pdf" },
+  { name: "경기도", pdf: "./assets/images/location-data/gg.pdf" },
+  { name: "강원특별자치도", pdf: "./assets/images/location-data/gw.pdf" },
+  { name: "충청북도", pdf: "./assets/images/location-data/cb.pdf" },
+  { name: "충청남도", pdf: "./assets/images/location-data/cn.pdf" },
+  { name: "전북특별자치도", pdf: "./assets/images/location-data/jb.pdf" },
+  { name: "전라남도", pdf: "./assets/images/location-data/jn.pdf" },
+  { name: "경상북도", pdf: "./assets/images/location-data/gb.pdf" },
+  { name: "경상남도", pdf: "./assets/images/location-data/gn.pdf" }
+];
