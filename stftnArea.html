@@ -1,0 +1,59 @@
+<div id="stftnArea" class="satisfactionbox mt50">
+  <p class="tit">현재 페이지에서 제공하는 정보에 대하여 만족하십니까?</p>
+  <div class="flex">
+    <div class="radiogroup terms">
+      <div>
+        <div class="radio-item">
+          <input
+            type="radio"
+            name="cntntsEvlSe"
+            id="VERY_SATSFC"
+            value="매우만족"
+            tabindex="0"
+            checked="checked"
+          />
+          <label for="VERY_SATSFC" value="매우만족">매우만족</label>
+        </div>
+        <div class="radio-item">
+          <input type="radio" name="cntntsEvlSe" id="SATSFC" value="매우만족" />
+          <label for="SATSFC" value="만족">만족</label>
+        </div>
+        <div class="radio-item">
+          <input type="radio" name="cntntsEvlSe" id="NRMLTY" value="보통" />
+          <label for="NRMLTY" value="보통">보통</label>
+        </div>
+        <div class="radio-item">
+          <input type="radio" name="cntntsEvlSe" id="DSCNTT" value="불만족" />
+          <label for="DSCNTT" value="불만족">불만족</label>
+        </div>
+        <div class="radio-item">
+          <input
+            type="radio"
+            name="cntntsEvlSe"
+            id="VERY_DSCNTT"
+            value="매우불만족"
+          />
+          <label for="VERY_DSCNTT" value="매우불만족">매우불만족</label>
+        </div>
+      </div>
+      <div class="etc">
+        <label class="blind_lab" for="DOC_TEXT">의견을 남겨주세요</label>
+        <input
+          type="text"
+          placeholder="의견을 남겨주시면 '귀산촌 종합지원' 개선에 큰 도움이 됩니다."
+          id="DOC_TEXT"
+        />
+      </div>
+    </div>
+    <a href="javascript:;" id="btnSatisfactionSubmit" class="btn" tabindex="0"
+      >평가하기</a
+    >
+  </div>
+</div>
+<script>
+  $(document).ready(function () {
+    $("#btnSatisfactionSubmit").on("click", function () {
+      alert("평가접수가 되었습니다");
+    });
+  });
+</script>

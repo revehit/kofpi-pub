@@ -70,6 +70,7 @@
     <link rel="stylesheet" href="./assets/css/ksc_01.css" />
     <link rel="stylesheet" href="./assets/css/ksc_02.css" />
     <link rel="stylesheet" href="./assets/css/ksc_03.css" />
+    <link rel="stylesheet" href="./assets/css/stftnArea.css" />
 
     <script
       type="text/javascript"
@@ -1946,6 +1947,8 @@
               02-6393-2648
             </p>
           </div>
+
+          <div data-include="stftnArea.html"></div>
         </div>
       </div>
 
@@ -2324,5 +2327,13 @@
       </div>
       <!--footerWrap_end-->
     </div>
+    <script>
+      $(document).ready(function () {
+        $("[data-include]").each(function () {
+          const file = $(this).data("include");
+          $(this).load(file);
+        });
+      });
+    </script>
   </body>
 </html>
