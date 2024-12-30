@@ -738,7 +738,8 @@ html {
     display: inline-block;
   }
   .localpage-quickmenu.on ul {
-    height: 362px;
+    /*height: 362px; list 3개일 때*/
+    height: 462px;
     opacity: 1;
     padding: 20px 0;
     visibility: visible;
@@ -905,5 +906,9 @@ html {
   }
   .recommend-box .slide_wrap {
     width: 100%;
+  }
+  .recommend-box .image-box p {
+    left: 50%;
+    transform: translateX(-50%);
   }
 }

@@ -2092,7 +2092,7 @@ const regions = [
           title: "경기도 귀농귀촌센터",
           url: "https://www.refarmgg.or.kr/com/cmm/EgovContentView.do?menuNo=10101000",
         },
-        { title: "", url: "" },
+        //{ title: "", url: "" },
       ],
       mento: [6, 7, 11],
     },
